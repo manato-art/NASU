@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>那須高原、ふたりの休日 — 新杉田発・車で巡る2泊3日デートプラン（7月中旬）</title>
+<meta name="description" content="新杉田から車で行く那須高原デートプラン（2泊3日・7月中旬）。NOZARU空中アスレチック、清流の里の川魚、茶臼岳ロープウェイ、恋人の聖地、アートビオトープ水庭、温泉まで。各スポットは公式サイトにリンク。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3efe6;
+    --paper-2:#ebe3d4;
+    --milk:#f8f2e4;
+    --ink:#20241e;
+    --ink-soft:#4d5246;
+    --moor:#264434;
+    --moor-2:#356450;
+    --fern:#5f8a6e;
+    --steam:#8699a0;
+    --ash:#6b625a;
+    --copper:#b9763a;
+    --copper-soft:#cf9a5e;
+    --berry:#a44e57;
+    --line:rgba(32,36,30,.14);
+    --line-soft:rgba(32,36,30,.08);
+    --shadow:0 1px 2px rgba(32,36,30,.05),0 12px 30px -18px rgba(32,36,30,.35);
+    --shadow-lg:0 2px 4px rgba(32,36,30,.06),0 30px 60px -30px rgba(32,36,30,.45);
+    --font-display:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+    --font-body:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;
+    --font-latin:"Cormorant Garamond",serif;
+    --radius:18px;
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--ink);
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(140% 70% at 50% -10%, rgba(134,153,160,.20), transparent 55%),
+      radial-gradient(120% 80% at 100% 0%, rgba(185,118,58,.10), transparent 50%),
+      linear-gradient(180deg,var(--paper) 0%, var(--paper-2) 100%);
+    background-attachment:fixed;
+    line-height:1.85;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:.01em;
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+    -webkit-tap-highlight-color:transparent;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity:.05;mix-blend-mode:multiply;
+  }
+  /* ---------- background atmosphere ---------- */
+  #atmos{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  #atmos .orb{position:absolute;border-radius:50%;filter:blur(72px);will-change:transform}
+  #atmos .orb1{width:520px;height:520px;top:-120px;left:-110px;opacity:.18;background:radial-gradient(circle,#3a6450,transparent 70%);animation:orbA 30s ease-in-out infinite alternate}
+  #atmos .orb2{width:640px;height:640px;top:-180px;right:-180px;opacity:.16;background:radial-gradient(circle,#8699a0,transparent 70%);animation:orbB 37s ease-in-out infinite alternate}
+  #atmos .orb3{width:480px;height:480px;top:46%;left:-170px;opacity:.14;background:radial-gradient(circle,#cf9a5e,transparent 70%);animation:orbC 33s ease-in-out infinite alternate}
+  #atmos .orb4{width:560px;height:560px;bottom:-200px;right:-120px;opacity:.17;background:radial-gradient(circle,#5f8a6e,transparent 70%);animation:orbD 35s ease-in-out infinite alternate}
+  #atmos .topo{position:absolute;inset:0;width:100%;height:100%;color:var(--moor);opacity:.06}
+  @keyframes orbA{to{transform:translate(60px,46px) scale(1.12)}}
+  @keyframes orbB{to{transform:translate(-54px,54px) scale(1.08)}}
+  @keyframes orbC{to{transform:translate(74px,-44px) scale(1.14)}}
+  @keyframes orbD{to{transform:translate(-64px,-52px) scale(1.06)}}
+
+  .wrap{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  a{color:inherit}
+  .ic{width:1em;height:1em;display:inline-block;vertical-align:-.14em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:40;-webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px);background:rgba(243,239,230,.82);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:14px;padding:11px 20px}
+  .nav-brand{font-family:var(--font-display);font-weight:700;font-size:.95rem;letter-spacing:.06em;white-space:nowrap;color:var(--moor)}
+  .nav-brand .sub{font-family:var(--font-latin);font-style:italic;font-weight:500;color:var(--copper);font-size:.85rem;margin-left:7px}
+  .chips{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-left:auto;padding:2px}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{white-space:nowrap;font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft);text-decoration:none;padding:6px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.5);transition:.25s;font-weight:500}
+  .chip:hover{color:var(--moor);border-color:var(--moor-2)}
+  .chip.active{background:var(--moor);color:var(--milk);border-color:var(--moor)}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(243,239,230,.05) 0%,rgba(243,239,230,.0) 40%,rgba(243,239,230,.85) 100%)}
+  .hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:104px 24px 80px}
+  .eyebrow{font-family:var(--font-latin);font-style:italic;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);font-size:.92rem;font-weight:600}
+  .hero h1{font-family:var(--font-display);font-weight:800;color:var(--moor);font-size:clamp(2.4rem,6.8vw,4.4rem);line-height:1.12;margin:.35em 0 .25em;letter-spacing:.01em;text-shadow:0 1px 0 rgba(248,242,228,.6)}
+  .hero h1 .thin{font-weight:500;color:var(--ink)}
+  .hero-lead{max-width:35em;font-size:1.05rem;color:var(--ink-soft);margin:0 0 26px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+  .meta-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.66);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:.85rem;color:var(--moor);box-shadow:var(--shadow);font-weight:500}
+  .meta-pill .ic{color:var(--copper);font-size:1.05rem}
+
+  /* ---------- motion system ---------- */
+  @keyframes revealUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes lineGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes sunPulse{0%,100%{opacity:.78}50%{opacity:1}}
+  .reveal.is-in{animation:revealUp .7s cubic-bezier(.2,.75,.25,1) both}
+
+  #scrollprog{position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--copper),var(--moor-2),var(--copper-soft));z-index:60;will-change:transform;pointer-events:none}
+  .hero-sun{animation:sunPulse 7s ease-in-out infinite}
+
+  /* hover micro-interactions */
+  .chip:hover{transform:translateY(-1px)}
+  .meta-pill{transition:transform .3s ease,box-shadow .3s ease}
+  .meta-pill:hover{transform:translateY(-2px)}
+  .rstep{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+  .rstep:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
+  .dchip{transition:transform .25s ease,border-color .25s ease,background .25s ease}
+  .dchip:hover{transform:translateY(-2px);border-color:var(--moor-2)}
+  .pcard-ext{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+  .pcard:hover .pcard-ext{transform:rotate(8deg) scale(1.08)}
+
+  /* timeline draw, items & dots (triggered by .day.is-in) */
+  .day.is-in .day-tag,.day.is-in .tl{animation:revealUp .55s cubic-bezier(.2,.75,.25,1) both}
+  .day.is-in .tl:nth-child(1){animation-delay:.05s}
+  .day.is-in .tl:nth-child(2){animation-delay:.11s}
+  .day.is-in .tl:nth-child(3){animation-delay:.17s}
+  .day.is-in .tl:nth-child(4){animation-delay:.23s}
+  .day.is-in .tl:nth-child(5){animation-delay:.29s}
+  .day.is-in .tl:nth-child(6){animation-delay:.35s}
+  .day.is-in .tl:nth-child(7){animation-delay:.41s}
+  .day.is-in .tl:nth-child(8){animation-delay:.47s}
+  .day.is-in .tl:nth-child(n+9){animation-delay:.52s}
+  .timeline::before{transform-origin:top center}
+  .day.is-in .timeline::before{animation:lineGrow .9s .15s cubic-bezier(.4,0,.2,1) forwards}
+  .tl .body::before{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+
+  section{padding:74px 0;scroll-margin-top:74px;position:relative}
+  .sec-head{margin-bottom:36px;max-width:44em}
+  .sec-head .eyebrow{font-size:.84rem}
+  .sec-head h2{font-family:var(--font-display);font-weight:700;color:var(--moor);font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.25;margin:.28em 0 .35em;letter-spacing:.02em}
+  .sec-head p{color:var(--ink-soft);font-size:1rem;margin:0}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent);border:0;max-width:var(--maxw);margin:0 auto}
+
+  .lede{font-size:1.14rem;line-height:2;color:var(--ink);max-width:42em}
+  .lede .em{font-family:var(--font-display);color:var(--moor);font-weight:600}
+  .note-card{background:var(--milk);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;margin-top:24px;box-shadow:var(--shadow)}
+  .note-card .label{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-latin);font-style:italic;letter-spacing:.1em;text-transform:uppercase;color:var(--copper);font-size:.82rem;font-weight:600;margin-bottom:8px}
+  .note-card .label .ic{font-size:1.1rem}
+
+  .seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+  .season{border:1px solid var(--line);border-radius:14px;padding:18px 16px;background:rgba(255,255,255,.45);transition:.3s}
+  .season:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--moor-2)}
+  .season.now{background:var(--moor);color:var(--milk);border-color:var(--moor)}
+  .season.now .s-kana,.season.now h4{color:var(--milk)}
+  .season.now .s-kana{opacity:.8}
+  .season .s-kana{font-family:var(--font-latin);font-style:italic;color:var(--copper);font-size:.85rem;letter-spacing:.08em}
+  .season h4{font-family:var(--font-display);margin:.2em 0 .4em;font-size:1.12rem;color:var(--moor)}
+  .season p{margin:0;font-size:.86rem;color:inherit;opacity:.92}
+  .season .badge{display:inline-block;margin-top:10px;font-size:.7rem;letter-spacing:.06em;background:var(--copper);color:#fff;padding:2px 9px;border-radius:999px}
+
+  .route{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:8px}
+  .rstep{position:relative;background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+  .rstep .n{font-family:var(--font-latin);font-style:italic;font-size:1.5rem;color:var(--copper-soft);line-height:1}
+  .rstep h4{font-family:var(--font-display);color:var(--moor);margin:.5em 0 .35em;font-size:1.06rem;display:flex;align-items:center;gap:9px}
+  .rstep h4 .ic{color:var(--copper);font-size:1.2rem}
+  .rstep p{margin:0;font-size:.88rem;color:var(--ink-soft)}
+  .access-facts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .fact{flex:1 1 200px;border-left:3px solid var(--copper);background:rgba(255,255,255,.4);padding:12px 16px;border-radius:0 12px 12px 0}
+  .fact .k{font-size:.74rem;letter-spacing:.08em;color:var(--ash);text-transform:uppercase;font-family:var(--font-latin);font-style:italic}
+  .fact .v{font-family:var(--font-display);color:var(--moor);font-size:1.18rem;font-weight:600}
+  .fact .v small{font-family:var(--font-body);font-size:.74rem;color:var(--ink-soft);font-weight:400;display:block;letter-spacing:0}
+
+  /* timeline */
+  .day{margin-bottom:50px}
+  .day-tag{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .day-tag .d{font-family:var(--font-latin);font-style:italic;font-size:2.3rem;color:var(--copper);line-height:1}
+  .day-tag h3{font-family:var(--font-display);font-size:1.45rem;color:var(--moor);margin:0;font-weight:700}
+  .day-tag .sub{color:var(--ink-soft);font-size:.9rem;margin-left:auto}
+  .timeline{position:relative;margin-top:24px;padding-left:6px}
+  .timeline::before{content:"";position:absolute;left:78px;top:10px;bottom:10px;width:2px;background:linear-gradient(180deg,var(--copper-soft),var(--moor-2));opacity:.5}
+  .tl{display:grid;grid-template-columns:78px 1fr;gap:20px;position:relative;padding:9px 0}
+  .tl .time{font-family:var(--font-latin);font-weight:600;color:var(--moor);font-size:1.02rem;text-align:right;padding-top:13px;letter-spacing:.02em}
+  .tl .body{position:relative;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);transition:.3s}
+  .tl .body:hover{transform:translateX(4px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
+  .tl .body::before{content:"";position:absolute;left:-31px;top:20px;width:13px;height:13px;border-radius:50%;background:var(--milk);border:3px solid var(--copper);box-shadow:0 0 0 4px var(--paper)}
+  .tl h4{margin:0 0 4px;font-family:var(--font-display);color:var(--ink);font-size:1.08rem;font-weight:600;display:flex;align-items:center;gap:9px}
+  .tl h4 .ic{color:var(--moor-2);font-size:1.15rem}
+  .tl p{margin:0;font-size:.9rem;color:var(--ink-soft)}
+  .tl .heart{margin-top:8px;font-size:.84rem;color:var(--berry);display:flex;align-items:flex-start;gap:7px}
+  .tl .heart .ic{color:var(--berry);font-size:1rem;margin-top:.2em}
+  .tl a.inl{color:var(--moor-2);font-weight:600;text-decoration:underline;text-decoration-color:var(--copper-soft);text-underline-offset:2px}
+
+  .weather{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 14px}
+  .wcard{border-radius:14px;padding:18px 20px;border:1px solid var(--line)}
+  .wcard.sun{background:linear-gradient(160deg,rgba(207,154,94,.18),rgba(255,255,255,.4))}
+  .wcard.rain{background:linear-gradient(160deg,rgba(134,153,160,.2),rgba(255,255,255,.4))}
+  .wcard .wt{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:600;color:var(--moor);margin-bottom:6px}
+  .wcard .wt .ic{font-size:1.25rem;color:var(--copper)}
+  .wcard.rain .wt .ic{color:var(--steam)}
+  .wcard p{margin:0;font-size:.88rem;color:var(--ink-soft)}
+
+  /* photo cards (linked) */
+  .pgrid{display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
+  .pcard{display:flex;flex-direction:column;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.35s;color:inherit;text-decoration:none;position:relative}
+  .pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
+  .pcard:hover .pcard-img img{transform:scale(1.05)}
+  .pcard-img{position:relative;aspect-ratio:4/3;background:linear-gradient(140deg,var(--g1,#356450),var(--g2,#264434));overflow:hidden;display:grid;place-items:center}
+  .pcard-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .5s ease}
+  .pcard-fallicon{width:48px;height:48px;color:rgba(255,255,255,.85);z-index:0;stroke-width:1.4}
+  .pcard-ext{position:absolute;top:10px;right:10px;z-index:2;width:30px;height:30px;border-radius:9px;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--moor);box-shadow:var(--shadow)}
+  .pcard-ext .ic{font-size:1rem}
+  .pcard-body{padding:17px 19px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .pcard .tag{font-family:var(--font-latin);font-style:italic;letter-spacing:.08em;color:var(--copper);font-size:.82rem}
+  .pcard h4{font-family:var(--font-display);color:var(--moor);font-size:1.16rem;margin:0;font-weight:700;display:flex;align-items:center;gap:8px}
+  .pcard h4 .ic{color:var(--moor-2);font-size:1.05rem}
+  .pcard p{margin:0;font-size:.88rem;color:var(--ink-soft);flex:1}
+  .pcard .meta{font-size:.77rem;color:var(--ash);display:flex;align-items:center;gap:7px;border-top:1px dashed var(--line);padding-top:9px;margin-top:4px;flex-wrap:wrap}
+  .pcard .meta .ic{color:var(--copper);font-size:.95rem}
+  .pcard-link{font-size:.77rem;color:var(--moor-2);display:inline-flex;align-items:center;gap:6px;font-weight:600}
+  .pcard-link .ic{font-size:.9rem}
+
+  /* lodging note */
+  .stay-note{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+  .snote{background:var(--milk);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .snote h4{font-family:var(--font-display);color:var(--moor);margin:0 0 5px;font-size:1.05rem;display:flex;align-items:center;gap:9px}
+  .snote h4 .ic{color:var(--copper)}
+  .snote p{margin:0;font-size:.87rem;color:var(--ink-soft)}
+  .stay-hero{flex-direction:row;border:1.5px solid var(--moor)}
+  .stay-hero .pcard-img{flex:0 0 44%;aspect-ratio:auto;min-height:300px}
+  .stay-hero .pcard-body{padding:26px 28px;gap:9px}
+  .stay-hero h4{font-size:1.45rem}
+  .stay-hero p{font-size:.95rem;line-height:1.8}
+  .chosen-badge{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;background:var(--moor);color:var(--milk);font-size:.74rem;letter-spacing:.08em;padding:4px 12px;border-radius:999px;font-weight:600}
+  .chosen-badge .ic{font-size:.95rem;color:var(--copper-soft)}
+  .stay-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+  .stay-facts span{font-size:.76rem;background:rgba(38,68,52,.07);border:1px solid var(--line);border-radius:8px;padding:4px 10px;color:var(--moor)}
+  .alt-label{font-family:var(--font-latin);font-style:italic;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);font-size:.82rem;margin:32px 0 14px}
+  .booking{margin-top:4px;border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:5px}
+  .booking .brow{display:flex;gap:12px;font-size:.85rem;align-items:baseline}
+  .booking .bk{flex:0 0 46px;color:var(--copper);font-family:var(--font-latin);font-style:italic;letter-spacing:.04em}
+  .booking .bv{color:var(--ink);font-weight:500}
+  .booking .brow:last-child .bv{font-family:var(--font-display);color:var(--moor);font-weight:700;font-size:1.08rem}
+  @media(max-width:700px){.stay-hero{flex-direction:column}.stay-hero .pcard-img{flex:auto;aspect-ratio:4/3;min-height:0}}
+
+  /* budget */
+  .grid{display:grid;gap:18px}
+  .grid.g2{grid-template-columns:repeat(2,1fr)}
+  .card{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:.35s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
+  .card .ci{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:var(--moor);color:var(--milk);margin-bottom:14px}
+  .card .ci .ic{font-size:1.35rem;stroke-width:1.5}
+  .card h4{font-family:var(--font-display);color:var(--moor);font-size:1.18rem;margin:0 0 .5em;font-weight:700}
+  .card p{margin:0 0 10px;font-size:.9rem;color:var(--ink-soft);flex:1}
+  .card .meta{font-size:.82rem;color:var(--ash);display:flex;align-items:center;gap:7px;border-top:1px dashed var(--line);padding-top:10px}
+  .card .meta .ic{color:var(--copper);font-size:1rem}
+  .budget-note{font-size:.84rem;color:var(--ash);margin-top:16px;display:flex;gap:8px;align-items:flex-start}
+  .budget-note .ic{color:var(--copper);font-size:1rem;margin-top:.2em;flex:none}
+  .dist-hub{display:flex;align-items:center;gap:16px;background:var(--moor);color:var(--milk);border-radius:var(--radius);padding:18px 22px;margin-bottom:10px;box-shadow:var(--shadow);flex-wrap:wrap}
+  .dist-hub .hubic{width:44px;height:44px;border-radius:11px;background:rgba(248,242,228,.15);display:grid;place-items:center;flex:none}
+  .dist-hub .hubic .ic{font-size:1.4rem;color:var(--milk)}
+  .dist-hub h4{font-family:var(--font-display);margin:0;font-size:1.15rem;color:var(--milk)}
+  .dist-hub p{margin:0;font-size:.82rem;opacity:.85}
+  .dist-hub .badge{margin-left:auto;font-size:.78rem;background:var(--copper);padding:5px 12px;border-radius:999px;white-space:nowrap}
+  .dist-band{display:grid;grid-template-columns:128px 1fr;gap:14px;align-items:start;padding:16px 2px;border-bottom:1px solid var(--line)}
+  .dist-band:last-of-type{border-bottom:0}
+  .dist-band .bl{font-family:var(--font-display);color:var(--moor);font-size:.96rem;font-weight:700;padding-top:5px}
+  .dist-band .bl small{display:block;font-family:var(--font-body);font-weight:400;color:var(--ash);font-size:.74rem}
+  .dchips{display:flex;flex-wrap:wrap;gap:8px}
+  .dchip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:.84rem;color:var(--ink)}
+  .dchip .ic{color:var(--moor-2);font-size:1.05rem}
+  .dchip .v{color:var(--moor);font-size:.78rem;background:rgba(38,68,52,.08);padding:1px 7px;border-radius:6px;margin-left:3px;white-space:nowrap}
+  @media(max-width:560px){.dist-band{grid-template-columns:1fr;gap:8px}}
+
+  /* checklist */
+  .check-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px}
+  .ci-group h4{font-family:var(--font-display);color:var(--moor);font-size:1.05rem;margin:0 0 10px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line);padding-bottom:8px}
+  .ci-group h4 .ic{color:var(--copper)}
+  .ck{display:flex;align-items:flex-start;gap:12px;padding:7px 0;cursor:pointer;user-select:none}
+  .ck input{position:absolute;opacity:0;width:0;height:0}
+  .ck .box{width:21px;height:21px;border:1.8px solid var(--moor-2);border-radius:6px;flex:none;margin-top:3px;position:relative;transition:.2s;background:rgba(255,255,255,.6)}
+  .ck .box::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid var(--milk);border-width:0 2.4px 2.4px 0;transform:rotate(45deg) scale(0);transition:.2s}
+  .ck input:checked + .box{background:var(--moor);border-color:var(--moor)}
+  .ck input:checked + .box::after{transform:rotate(45deg) scale(1)}
+  .ck input:focus-visible + .box{outline:2px solid var(--copper);outline-offset:2px}
+  .ck .txt{font-size:.92rem;color:var(--ink);transition:.2s}
+  .ck input:checked ~ .txt{color:var(--ash);text-decoration:line-through;text-decoration-color:var(--copper-soft)}
+
+  .tips{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .tip{display:flex;gap:14px;padding:16px 18px;background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:14px}
+  .tip .ti{width:34px;height:34px;flex:none;border-radius:9px;display:grid;place-items:center;background:var(--moor);color:var(--milk)}
+  .tip .ti .ic{font-size:1.1rem}
+  .tip h4{font-family:var(--font-display);margin:0 0 3px;font-size:1rem;color:var(--moor)}
+  .tip p{margin:0;font-size:.85rem;color:var(--ink-soft)}
+
+  .closing{position:relative;text-align:center;padding:90px 0;border-top:1px solid var(--line);background:radial-gradient(120% 90% at 50% 0%,rgba(38,68,52,.06),transparent 60%)}
+  .closing .eyebrow{font-size:.9rem}
+  .closing blockquote{font-family:var(--font-display);font-weight:600;color:var(--moor);font-size:clamp(1.4rem,3.4vw,2.1rem);line-height:1.7;max-width:25em;margin:.6em auto;letter-spacing:.02em}
+  .closing .sig{font-family:var(--font-latin);font-style:italic;color:var(--copper);font-size:1.1rem;letter-spacing:.06em}
+
+  footer{background:var(--moor);color:rgba(248,242,228,.78);font-size:.82rem;padding:30px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  footer .disc{max-width:62ch;line-height:1.7;display:flex;gap:9px;align-items:flex-start}
+  footer .disc .ic{color:var(--copper-soft);font-size:1.05rem;margin-top:.15em;flex:none}
+  footer .brand{font-family:var(--font-display);color:var(--milk);font-size:1rem}
+
+  @media(max-width:860px){
+    .route{grid-template-columns:1fr}
+    .seasons{grid-template-columns:1fr 1fr}
+    .pgrid{grid-template-columns:1fr 1fr}
+    .grid.g2,.tips,.weather,.check-cols,.stay-note{grid-template-columns:1fr}
+    .nav-brand .sub{display:none}
+  }
+  @media(max-width:560px){
+    .seasons,.pgrid{grid-template-columns:1fr}
+    .hero-inner{padding:84px 22px 62px}
+    section{padding:56px 0}
+    .timeline::before{left:64px}
+    .tl{grid-template-columns:62px 1fr;gap:16px}
+    .tl .body::before{left:-27px}
+    .day-tag .sub{display:none}
+    #atmos .orb{filter:blur(48px)}
+    #atmos .orb3{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+    html{scroll-behavior:auto}
+    .reveal,.day-tag,.day .tl{opacity:1!important;animation:none!important}
+    .timeline::before{transform:none!important}
+    .tl .body::before{transform:scale(1)!important}
+    .hero-smoke,.hero-sun,#atmos .orb{animation:none!important}
+    .pcard:hover .pcard-img img{transform:none}
+    #scrollprog{display:none}
+  }
+  @media print{
+    .nav,.hero-art,.hero-veil{display:none!important}
+    body{background:#fff}
+    .reveal{opacity:1;transform:none}
+    section{padding:24px 0;break-inside:avoid}
+    .card,.pcard,.tl .body{box-shadow:none}
+  }
+  .hero-smoke{transform-origin:center bottom;animation:drift 9s ease-in-out infinite}
+  @keyframes drift{0%,100%{opacity:.55;transform:translateX(0) translateY(0)}50%{opacity:.85;transform:translateX(10px) translateY(-8px)}}
+</style>
+</head>
+<body>
+
+<div id="scrollprog" aria-hidden="true"></div>
+
+<div id="atmos" aria-hidden="true">
+  <span class="orb orb1"></span>
+  <span class="orb orb2"></span>
+  <span class="orb orb3"></span>
+  <span class="orb orb4"></span>
+  <svg class="topo" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="currentColor" stroke-width="1.1">
+    <path d="M-40 110 C 240 50 460 170 720 120 S 1180 50 1480 120"/>
+    <path d="M-40 240 C 260 180 520 300 760 250 S 1220 190 1480 250"/>
+    <path d="M-40 370 C 220 320 500 430 780 380 S 1240 320 1480 390"/>
+    <path d="M-40 510 C 260 450 540 570 800 510 S 1240 450 1480 520"/>
+    <path d="M-40 650 C 240 600 520 710 760 650 S 1220 590 1480 660"/>
+    <path d="M-40 790 C 260 740 540 850 800 790 S 1240 740 1480 800"/>
+    <path d="M-40 920 C 240 880 520 980 760 920 S 1220 870 1480 930"/>
+  </g></svg>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 13l1.8-5A2 2 0 0 1 6.7 7h10.6a2 2 0 0 1 1.9 1l1.8 5"/><path d="M2.5 13h19v4a1 1 0 0 1-1 1h-1.5a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H4.5a1 1 0 0 1-1-1z"/><path d="M6 16h.01M18 16h.01"/></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><path d="M6 21L9 3M18 21L15 3"/><path d="M12 5v2M12 11v2M12 17v2"/></symbol>
+  <symbol id="i-ropeway" viewBox="0 0 24 24"><path d="M3 5l18-2"/><path d="M14 4.2v3M8 12.5v6.3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V12.5a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1z"/><path d="M12 11.5V9"/></symbol>
+  <symbol id="i-volcano" viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M8 20l2.2-6h3.6L16 20"/><path d="M9.5 9.5c1-1 .5-2 1.2-3M12.5 9c.8-1.2 0-2.2 1-3.4M14.6 10c.6-.9 1.6-1 1.4-2.4"/></symbol>
+  <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2 19h20"/><path d="M4 19l5-10 3.2 6 2.3-4L20 19"/></symbol>
+  <symbol id="i-onsen" viewBox="0 0 24 24"><path d="M4 13h16v1.5a5.5 5.5 0 0 1-5.5 5.5h-5A5.5 5.5 0 0 1 4 14.5z"/><path d="M8.5 9.5c.8-1.2-.8-2 0-3.5M12 9.5c.8-1.2-.8-2 0-3.5M15.5 9.5c.8-1.2-.8-2 0-3.5"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 20v-9M3 14h11a4 4 0 0 1 4 4v2M3 20h18v-2M21 18v2"/><path d="M5 14v-2h4v2"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="6.5" cy="11" r="1.7"/><circle cx="10.5" cy="7.5" r="1.7"/><circle cx="14.5" cy="7.5" r="1.7"/><circle cx="18" cy="11.5" r="1.7"/><path d="M12 12.5c-2.4 0-4.5 1.7-4.5 3.8 0 1.6 1.4 2.2 2.8 1.7 1.1-.4 2.3-.4 3.4 0 1.4.5 2.8-.1 2.8-1.7 0-2.1-2.1-3.8-4.5-3.8z"/></symbol>
+  <symbol id="i-cheese" viewBox="0 0 24 24"><path d="M3 17l9-9 9 5v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M12 8l9 5"/><path d="M8 16h.01M12 15h.01M16 16h.01"/></symbol>
+  <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 10h2.2a2.3 2.3 0 0 1 0 4.6H17"/><path d="M8 5.5c-.6-.9.6-1.6 0-2.5M12 5.5c-.6-.9.6-1.6 0-2.5"/></symbol>
+  <symbol id="i-icecream" viewBox="0 0 24 24"><path d="M9 9h6l-2.6 11a.4.4 0 0 1-.8 0z"/><path d="M9.2 9a2.8 2.8 0 0 1 5.6 0M9.8 6.6a2.3 2.3 0 0 1 4.4 0M10.4 4.6a1.7 1.7 0 0 1 3.2 0"/></symbol>
+  <symbol id="i-bridge" viewBox="0 0 24 24"><path d="M2 15h20"/><path d="M5 15V9M19 15V9"/><path d="M5 9c4.5 4 9.5 4 14 0"/><path d="M9 11v3M12 11.4v3.6M15 11v3"/></symbol>
+  <symbol id="i-water" viewBox="0 0 24 24"><path d="M3 9c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2"/><path d="M3 14c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2"/><path d="M3 19c2.5 0 2.5 2 5 2"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 10a6 6 0 0 1-12 0c0-3.6 6-10 6-10z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7l1.4-2.2h4.2L15.5 7"/><circle cx="12" cy="13.5" r="3.3"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.6-9.2-9C1.2 7.7 3 4.5 6.2 4.5c2 0 3.2 1.2 3.8 2.3C10.6 5.7 11.8 4.5 13.8 4.5c3.2 0 5 3.2 3.4 6.5C19 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M2 18h20"/><path d="M6 18a6 6 0 0 1 12 0"/><path d="M12 7V3M4.7 9.3L3.3 7.9M19.3 9.3l1.4-1.4M2 14h2M20 14h2"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.5A8 8 0 1 1 10 4a6.3 6.3 0 0 0 10.5 10.5z"/><path d="M18 4l.5 1.3L19.8 6l-1.3.6L18 8l-.6-1.4L16 6l1.4-.6z"/></symbol>
+  <symbol id="i-rain" viewBox="0 0 24 24"><path d="M6 14a4.5 4.5 0 0 1 .6-9 5.5 5.5 0 0 1 10.6 1.4A3.8 3.8 0 0 1 17 14z"/><path d="M8 18l-1 2M12 18l-1 2M16 18l-1 2"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19C9 14.5 12 12.5 17 10.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.2v5l3.2 2"/></symbol>
+  <symbol id="i-yen" viewBox="0 0 24 24"><path d="M8 5l4 6 4-6"/><path d="M12 11v8M8.4 14h7.2M8.4 17h7.2"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.7 4.6 1.7 5.6 6.3 6.3-4.6.7-5.6 1.7-6.3 6.3-.7-4.6-1.7-5.6-6.3-6.3C10.3 8.6 11.3 7.6 12 3z"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c3 4 5 6 5 9.5A5 5 0 0 1 7 12.5c0-1.3.5-2.3 1.2-3.3.4 1 .9 1.6 1.8 2C10.2 8 10.5 5.7 12 3z"/></symbol>
+  <symbol id="i-meat" viewBox="0 0 24 24"><path d="M14.5 4a5.5 5.5 0 0 1 0 11l-7.6 5.6a2 2 0 0 1-2.9-2.7L9.5 9.5A5.5 5.5 0 0 1 14.5 4z"/><circle cx="14.5" cy="9.5" r="1.6"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2.2 4.8L8.5 15.5l2.2-4.8z"/></symbol>
+  <symbol id="i-zip" viewBox="0 0 24 24"><path d="M3 5l18 9"/><circle cx="11.2" cy="9.6" r="1.5"/><path d="M11.2 11.1v2.4M11.2 13.5c-1.6 0-2.2 1.6-1.1 3.3M11.2 13.5c1.6 0 2.2 1.6 1.1 3.3"/></symbol>
+  <symbol id="i-fish" viewBox="0 0 24 24"><path d="M3 12c3.5-5 10.5-5 14 0-3.5 5-10.5 5-14 0z"/><path d="M17 12l4-3v6z"/><circle cx="7.5" cy="11" r=".7"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+</defs></svg>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">那須高原<span class="sub">Nasu Highlands</span></span>
+    <div class="chips" id="chips">
+      <a class="chip" href="#intro">はじめに</a>
+      <a class="chip" href="#season">季節</a>
+      <a class="chip" href="#access">アクセス</a>
+      <a class="chip" href="#plan">旅程</a>
+      <a class="chip" href="#spots">スポット</a>
+      <a class="chip" href="#food">川魚・食</a>
+      <a class="chip" href="#stay">宿</a>
+      <a class="chip" href="#dist">距離</a>
+      <a class="chip" href="#budget">予算</a>
+      <a class="chip" href="#pack">持ち物</a>
+      <a class="chip" href="#tips">心得</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="hero-art" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe6e2"/><stop offset="0.5" stop-color="#e9e7da"/><stop offset="1" stop-color="#f3efe6"/></linearGradient>
+      <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fb1b4"/><stop offset="1" stop-color="#b9c4c1"/></linearGradient>
+      <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f8a6e"/><stop offset="1" stop-color="#6f9579"/></linearGradient>
+      <linearGradient id="vol" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#33523f"/><stop offset="1" stop-color="#264434"/></linearGradient>
+      <linearGradient id="near" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c4a39"/><stop offset="1" stop-color="#223a2c"/></linearGradient>
+      <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f2d9b0"/><stop offset="0.6" stop-color="#eccf9c" stop-opacity="0.5"/><stop offset="1" stop-color="#eccf9c" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1440" height="560" fill="url(#sky)"/>
+    <circle cx="1090" cy="150" r="150" fill="url(#sun)"/>
+    <circle class="hero-sun" cx="1090" cy="150" r="46" fill="#f5e3c2" opacity="0.85"/>
+    <path d="M0 300 L150 250 L320 290 L500 235 L680 285 L880 240 L1080 295 L1280 250 L1440 290 L1440 560 L0 560 Z" fill="url(#far)" opacity="0.7"/>
+    <rect x="0" y="300" width="1440" height="70" fill="#f3efe6" opacity="0.35"/>
+    <path d="M0 360 L220 320 L430 365 L640 318 L860 368 L1080 330 L1300 372 L1440 345 L1440 560 L0 560 Z" fill="url(#mid)" opacity="0.85"/>
+    <path d="M760 360 L900 165 L1040 360 Z" fill="url(#vol)"/>
+    <path d="M868 198 L900 165 L936 200 L918 214 L900 205 L882 214 Z" fill="#cfd6d2" opacity="0.6"/>
+    <g class="hero-smoke"><path d="M900 168 C885 130 920 120 905 88 C895 66 918 52 908 30" stroke="#cdd6d3" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.6"/></g>
+    <path d="M0 430 L260 388 L520 432 L780 392 L1040 436 L1300 398 L1440 430 L1440 560 L0 560 Z" fill="url(#near)"/>
+    <g fill="#1c3024" opacity="0.9"><path d="M140 470 l14 -34 l14 34 z"/><path d="M170 466 l8 -22 l8 22 z"/><path d="M1230 478 l16 -38 l16 38 z"/><path d="M1180 484 l12 -30 l12 30 z"/></g>
+    <line x1="640" y1="404" x2="900" y2="250" stroke="#1c3024" stroke-width="1.4" opacity="0.4"/>
+    <rect x="752" y="320" width="16" height="11" rx="2" fill="#1c3024" opacity="0.55" transform="rotate(-30 760 325)"/>
+  </svg>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <p class="eyebrow reveal">A Highland Escape for Two — Mid July</p>
+    <h1 class="reveal">那須高原、<br><span class="thin">ふたりの</span>休日</h1>
+    <p class="hero-lead reveal">森の樹上を渡る空中アスレチック、滝の釣り堀で味わう川魚、火山と温泉、夜は満天の星。<br>新杉田から車で、盛夏の高原へ。〈NOZARU〉と〈清流の里〉を主役にした、2泊3日の道のり。</p>
+    <div class="hero-meta">
+      <span class="meta-pill reveal"><svg class="ic"><use href="#i-car"/></svg>新杉田 出発・車</span>
+      <span class="meta-pill reveal"><svg class="ic"><use href="#i-road"/></svg>片道 約3.5時間</span>
+      <span class="meta-pill reveal"><svg class="ic"><use href="#i-moon"/></svg>2泊3日</span>
+      <span class="meta-pill reveal"><svg class="ic"><use href="#i-sunrise"/></svg>7/14（火）〜16（木）</span>
+      <span class="meta-pill reveal"><svg class="ic"><use href="#i-zip"/></svg>NOZARU &amp; 川魚</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="intro" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Prologue</p><h2>なぜ、那須高原なのか</h2></div>
+  <p class="lede reveal">
+    那須は<span class="em">「歩くデート」と「ゆるむデート」が両立する</span>稀有な高原です。
+    朝は<span class="em">NOZARU</span>の樹上で少しだけ冒険して、昼は<span class="em">清流の里</span>で釣りたての川魚を炭火で。
+    午後は牧場のソフト、火山と温泉、夜は<span class="em">恋人の聖地</span>から関東平野の灯りを眺める。
+    車だから、気分のままに点と点をつなげる。盛夏でも標高が高く涼しく、川と森が気持ちいい季節です。
+  </p>
+  <div class="note-card reveal">
+    <span class="label"><svg class="ic"><use href="#i-info"/></svg>このプランの前提と使い方</span>
+    旅行は<strong>2026年7月14日(火)〜16日(木)・2泊3日（盛夏）</strong>、出発は<strong>新杉田・車</strong>、宿は<strong>ホテルエピナール那須に2連泊（予約確定）</strong>。主役は<strong>森の空中アスレチック〈NOZARU〉</strong>と<strong>川魚の〈清流の里〉</strong>。
+    各スポットのカードは<strong>クリックで公式サイトへ移動</strong>します。写真は各公式ページのライブプレビューを表示しています（環境により読み込めない場合はアイコンの図柄に切り替わります）。
+    <strong>季節・人数・予算・宿の好み</strong>を教えてもらえれば、ここからさらに仕立て直せます。
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="season" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Seasons</p><h2>季節のしおり</h2><p>那須は標高差が大きく、麓と山頂で別世界。7月中旬は街より涼しく、川遊びと新緑の盛りです。</p></div>
+  <div class="seasons">
+    <div class="season now reveal">
+      <span class="s-kana">Mid Summer</span><h4>盛夏（7月中旬）</h4>
+      <p>街より5〜10℃涼しい高原。川魚・滝・牧場が心地よい。午後はにわか雨（夕立・雷）に注意、虫除けも忘れずに。</p>
+      <span class="badge">今回の旅</span>
+    </div>
+    <div class="season reveal"><span class="s-kana">Spring</span><h4>新緑</h4><p>5〜6月、みずみずしい緑とあじさい。空気が澄み、山の眺めが格別。</p></div>
+    <div class="season reveal"><span class="s-kana">Autumn</span><h4>紅葉</h4><p>9月下旬〜10月、茶臼岳〜つつじ吊橋が燃えるよう。山岳路は渋滞必至。</p></div>
+    <div class="season reveal"><span class="s-kana">Winter</span><h4>冬</h4><p>雪と湯けむり。秘湯にこもる大人の旅。山岳路は冬季規制あり。</p></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="access" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Getting There</p><h2>アクセス — 新杉田から車で</h2><p>距離はおよそ230〜250km。早めに出て、サービスエリアで一息つきながら向かうのが正解です。</p></div>
+  <div class="route">
+    <div class="rstep reveal"><div class="n">01</div><h4><svg class="ic"><use href="#i-car"/></svg>新杉田 → 首都高</h4><p>横浜横須賀道路・首都高湾岸線から都心方面へ。朝は渋滞前の時間帯に抜けたい区間。</p></div>
+    <div class="rstep reveal"><div class="n">02</div><h4><svg class="ic"><use href="#i-road"/></svg>東北自動車道へ</h4><p>川口JCTから東北道を北上。蓮田・佐野・那須高原などのSAで休憩＆ご当地グルメ補給。</p></div>
+    <div class="rstep reveal"><div class="n">03</div><h4><svg class="ic"><use href="#i-pin"/></svg>那須ICで降りる</h4><p>那須ICが高原の玄関口。ここから「那須街道」を上がり、ボルケーノハイウェイへ。</p></div>
+  </div>
+  <div class="access-facts reveal">
+    <div class="fact"><div class="k">Distance</div><div class="v">約230–250km<small>新杉田 → 那須IC</small></div></div>
+    <div class="fact"><div class="k">Drive time</div><div class="v">約3〜3.5時間<small>休憩込みで3.5〜4h想定</small></div></div>
+    <div class="fact"><div class="k">ETC toll(片道)</div><div class="v">約5,000–6,000円<small>目安・要確認</small></div></div>
+    <div class="fact"><div class="k">Parking</div><div class="v">多くが無料<small>各施設に駐車場あり</small></div></div>
+  </div>
+  <div class="note-card reveal"><span class="label"><svg class="ic"><use href="#i-info"/></svg>運転のメモ</span>
+    高原内は道幅が広く走りやすい一方、<strong>ボルケーノハイウェイ（山岳路）は夜間に鹿や霧</strong>に注意。給油は山に上がる前に。料金・所要は時間帯と渋滞で変わるので、出発前にカーナビ／地図アプリで最新をご確認ください。
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="plan" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">The Itinerary</p><h2>2泊3日の道のり</h2><p>「午前は山と外遊び（夕立前）、午後はゆるめる」が黄金律。時刻はすべて目安、ふたりのペースで前後させてOK。</p></div>
+
+  <div class="day">
+    <div class="day-tag"><span class="d">Day 1</span><h3>登って、釣って、湯にとける</h3><span class="sub">7/14(火)・走行 → NOZARU → 川魚 → 温泉</span></div>
+    <div class="timeline">
+      <div class="tl"><div class="time">6:30</div><div class="body"><h4><svg class="ic"><use href="#i-car"/></svg>新杉田を出発</h4><p>渋滞前に首都高を抜ける。プレイリストと飲み物を用意して、ドライブもデートの一部に。</p></div></div>
+      <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>SAで休憩</h4><p>佐野・蓮田など。朝のSAグルメで小休止。運転を交代できるなら交代を。</p></div></div>
+      <div class="tl"><div class="time">10:00</div><div class="body"><h4><svg class="ic"><use href="#i-pin"/></svg>那須着 → NOZARUへ</h4><p>着いたら今日の主役へ直行。<a class="inl" href="https://nozaru.net/nozaru/" target="_blank" rel="noopener">NOZARU</a>受付へ（予約していればスムーズ。営業8:30〜17:00）。</p></div></div>
+      <div class="tl"><div class="time">10:30</div><div class="body">
+        <h4><svg class="ic"><use href="#i-zip"/></svg>NOZARU — 森の空中アスレチック（主役）</h4>
+        <p>樹上10m超を、ワイヤーで渡る巨大アスレチック。8コース72エレメント、100m超のジップラインも。声をかけ合って一緒にクリアする、最高の共同作戦。</p>
+        <div class="weather">
+          <div class="wcard sun"><div class="wt"><svg class="ic"><use href="#i-zip"/></svg>決行（晴れ）</div><p>大人4,600円・身長130cm以上。予約優先。動きやすい服とスニーカーで。所要は目安2〜3時間ほど（要確認）。</p></div>
+          <div class="wcard rain"><div class="wt"><svg class="ic"><use href="#i-rain"/></svg>振替（雨・雷）</div><p>夏の午後は夕立・落雷も。荒天時は中止のことがあるので、屋内の<a class="inl" href="https://nasu-oukoku.com/" target="_blank" rel="noopener">那須どうぶつ王国</a>へ切替。</p></div>
+        </div>
+        <p class="heart"><svg class="ic"><use href="#i-heart"/></svg>少し怖い高さを二人で越えると、距離がぐっと縮まる。クリア後のハイタッチまでがセット。</p>
+      </div></div>
+      <div class="tl"><div class="time">13:00</div><div class="body"><h4><svg class="ic"><use href="#i-fish"/></svg>清流の里で川魚ランチ</h4><p>高さ4.5mの滝がある釣り堀でイワナ・ニジマスを釣り、その場で炭火・天然塩の塩焼きに。名物の手打ちそば・清流うどんも。<a class="inl" href="https://www.seiryunosato.com/" target="_blank" rel="noopener">清流の里</a>（食事11:00〜15:00／木曜定休）。NOZARUと同じ高久乙エリアで近い。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>自分で釣った魚を分け合う昼。アクティブのあとの一尾は格別。</p></div></div>
+      <div class="tl"><div class="time">14:45</div><div class="body"><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場でゆるむ</h4><p>入場無料の老舗。<a class="inl" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener">南ヶ丘牧場</a>のジャージー牛乳ソフト、動物ふれあい。肩の力が抜けるレトロ空間。</p></div></div>
+      <div class="tl"><div class="time">16:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナール那須にチェックイン（16:00）→ 温泉・プール</h4><p>今回の宿は<a class="inl" href="https://www.epinard.jp/" target="_blank" rel="noopener">ホテルエピナール那須</a>に2連泊（メインタワー・デラックス洋室53㎡）。まずは温泉とプールで、汗をかいた体をほどく。</p></div></div>
+      <div class="tl"><div class="time">17:30</div><div class="body"><h4><svg class="ic"><use href="#i-heart"/></svg>恋人の聖地で夕景・夜景</h4><p>標高1048mの<a class="inl" href="https://www.jalan.net/kankou/spt_guide000000182430/" target="_blank" rel="noopener">那須高原展望台</a>（恋人の聖地）。日が落ちると関東平野の灯りが一面に。小窓のピエロの言い伝えも。</p></div></div>
+      <div class="tl"><div class="time">18:30</div><div class="body"><h4><svg class="ic"><use href="#i-flame"/></svg>夕食 — 和洋中100種バイキング</h4><p>宿の人気No.1プラン、和洋中100種の豪華バイキング。あれもこれもと取り分けて、旅の初日を乾杯で締める。</p></div></div>
+      <div class="tl"><div class="time">21:00</div><div class="body"><h4><svg class="ic"><use href="#i-moon"/></svg>星空</h4><p>光害の少ない那須の夜空。露天から、あるいは宿の前で。夏でも夜は涼しい、一枚羽織って。</p></div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-tag"><span class="d">Day 2</span><h3>火山と、滝と、水の庭</h3><span class="sub">7/15(水)・茶臼岳 → 自然 → アート</span></div>
+    <div class="timeline">
+      <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>朝食、ゆっくり</h4><p>2泊あるから急がない。高原の朝の空気を味わってから動き出す。</p></div></div>
+      <div class="tl"><div class="time">9:30</div><div class="body"><h4><svg class="ic"><use href="#i-ropeway"/></svg>那須ロープウェイ → 茶臼岳</h4><p>111人乗りゴンドラで約4分、9合目へ。活火山の荒々しい眺めと雲海。<a class="inl" href="https://www.nasu-ropeway.jp/" target="_blank" rel="noopener">那須ロープウェイ</a>（大人往復2,000円）。<span style="color:var(--ash)">※強風で運休あり、当日要確認。雨なら殺生石やカフェへ。</span></p></div></div>
+      <div class="tl"><div class="time">11:30</div><div class="body"><h4><svg class="ic"><use href="#i-volcano"/></svg>殺生石・賽の河原</h4><p>九尾の狐伝説が眠る火山地帯。硫黄の噴気と木道散策で別世界の空気。<a class="inl" href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" rel="noopener">殺生石</a>（那須湯本）。</p></div></div>
+      <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-meat"/></svg>昼食</h4><p>湯本・高原のレストランで。山歩きのあとはしっかりめに。</p></div></div>
+      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-bridge"/></svg>つつじ吊橋＆駒止の滝</h4><p>橋長130m・高さ38mの<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/11" target="_blank" rel="noopener">つつじ吊橋</a>から那須連山を望み、近くの<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/14" target="_blank" rel="noopener">駒止の滝</a>観瀑台へ。「那須第一の滝」の神秘的な滝つぼ。</p></div></div>
+      <div class="tl"><div class="time">15:30</div><div class="body"><h4><svg class="ic"><use href="#i-water"/></svg>アートビオトープ「水庭」</h4><p>建築家・石上純也が手がけた、318本の木と160の池が織りなす幻想的な庭園（完全予約制）。<a class="inl" href="https://www.artbiotop.jp/water_garden" target="_blank" rel="noopener">水庭</a>は雨でも美しい。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>言葉少なに歩きたい場所。ふたりの“好き”の解像度が上がる。</p></div></div>
+      <div class="tl"><div class="time">17:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナールへ戻ってのんびり</h4><p>2泊目も同じ宿だから、荷ほどき不要で身軽。温泉とプールをもう一度、ネイチャーツアーや館内でゆっくり。夕食は前夜と趣を変えて。</p></div></div>
+      <div class="tl"><div class="time">18:30</div><div class="body"><h4><svg class="ic"><use href="#i-flame"/></svg>夕食、そして夜の湯</h4><p>2夜目もバイキングを気分で。趣を変えたいなら別注のフレンチや日本料理「菜す乃」も（要確認）。湯と星で、とことんのんびり。</p></div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-tag"><span class="d">Day 3</span><h3>カフェと、余韻と、お土産</h3><span class="sub">7/16(木)・黒磯 → 土産 → 帰路</span></div>
+    <div class="timeline">
+      <div class="tl"><div class="time">9:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>朝ゆっくり → チェックアウト</h4><p>最終日は名残を惜しんで。荷物をまとめて黒磯方面へ。</p></div></div>
+      <div class="tl"><div class="time">11:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>1988 CAFE SHOZO（黒磯）</h4><p>那須が育てたカフェ文化の聖地。丁寧な一杯と焼き菓子で旅をしめる。<a class="inl" href="https://www.shozo.co.jp/" target="_blank" rel="noopener">SHOZO</a>（11:00〜・黒磯駅徒歩10分）。<span style="color:var(--ash)">※SHOZOは不定休（第1木曜が休みとの情報）。7/16は第3木曜だが念のため<a class="inl" href="https://www.shozo.co.jp/news/categories/holiday/" target="_blank" rel="noopener">公式の営業日</a>を確認。休みなら年中無休のチーズガーデンのカフェへ。</span></p></div></div>
+      <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-leaf"/></svg>軽め昼 / 街さんぽ</h4><p>黒磯の雑貨店やベーカリーを少し。地元の空気をもう少しだけ。</p></div></div>
+      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-cheese"/></svg>チーズガーデンでお土産</h4><p>御用邸チーズケーキを名残に。<a class="inl" href="https://cheesegarden.jp/pages/honten" target="_blank" rel="noopener">チーズガーデン那須本店</a>でカフェ＆土産、車内おやつも。年中無休なので木曜でも安心。そのまま那須ICへ。</p></div></div>
+      <div class="tl"><div class="time">14:30</div><div class="body"><h4><svg class="ic"><use href="#i-road"/></svg>那須ICから帰路</h4><p>夕方の渋滞を読みつつ南下。SAで休憩を。眠気は無理せず交代・仮眠で。</p></div></div>
+      <div class="tl"><div class="time">18:00</div><div class="body"><h4><svg class="ic"><use href="#i-car"/></svg>新杉田 着</h4><p>目安。渋滞次第で前後。最後まで安全運転で、いい旅を締めくくる。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="spots" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Places</p><h2>ふたりのスポット帖</h2><p>各カードはクリックで公式サイトへ。気分と天気で組み替えられるよう、少し多めに。</p></div>
+  <div class="pgrid">
+
+    <a class="pcard reveal" href="https://nozaru.net/nozaru/" target="_blank" rel="noopener" style="--g1:#c08338;--g2:#8a5326">
+      <div class="pcard-img"><img data-url="https://nozaru.net/nozaru/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://nozaru.net/nozaru/" alt="NOZARU 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-zip"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Today's Star</span><h4><svg class="ic"><use href="#i-zip"/></svg>NOZARU 空中アスレチック</h4><p>樹上10m超を渡る森の巨大アスレチック。8コース72エレメント、100m超のジップライン。今回の主役（やさしいKOZARUは身長110cm〜）。</p><div class="meta"><svg class="ic"><use href="#i-info"/></svg>大人4,600円 / 身長130cm〜 / 予約優先 ／ 宿から約30分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.seiryunosato.com/" target="_blank" rel="noopener" style="--g1:#2f7d8a;--g2:#2c5a4f">
+      <div class="pcard-img"><img data-url="https://www.seiryunosato.com/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.seiryunosato.com/" alt="那須高原 清流の里 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-fish"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">River Fish</span><h4><svg class="ic"><use href="#i-fish"/></svg>那須高原 清流の里</h4><p>滝のある釣り堀でイワナ・ニジマスを釣って、炭火・天然塩で塩焼き。手打ちそば・清流うどんも名物。</p><div class="meta"><svg class="ic"><use href="#i-clock"/></svg>9:00–15:00 / 木曜定休 / 竿200円〜 ／ 宿から約25分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.nasu-ropeway.jp/" target="_blank" rel="noopener" style="--g1:#33523f;--g2:#223a2c">
+      <div class="pcard-img"><img data-url="https://www.nasu-ropeway.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.nasu-ropeway.jp/" alt="那須ロープウェイ 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-ropeway"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Adventure</span><h4><svg class="ic"><use href="#i-ropeway"/></svg>那須ロープウェイ・茶臼岳</h4><p>111人乗りゴンドラで約4分、9合目へ。活火山の荒々しい眺望と雲海。軽い散策で少しの冒険を。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>大人往復2,000円 / 強風運休あり ／ 宿から約35分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" rel="noopener" style="--g1:#7a6a58;--g2:#4a463f">
+      <div class="pcard-img"><img data-url="https://www.tochigiji.or.jp/spot/s9488" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.tochigiji.or.jp/spot/s9488" alt="殺生石 紹介ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-volcano"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Mystic</span><h4><svg class="ic"><use href="#i-volcano"/></svg>殺生石・賽の河原</h4><p>九尾の狐の伝説が眠る火山地帯。硫黄の匂いと立ちのぼる噴気。木道を歩くと別世界の空気。</p><div class="meta"><svg class="ic"><use href="#i-pin"/></svg>那須湯本 / 見学自由 ／ 宿から約25分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.jalan.net/kankou/spt_guide000000182430/" target="_blank" rel="noopener" style="--g1:#a44e57;--g2:#7c3a44">
+      <div class="pcard-img"><img data-url="https://www.jalan.net/kankou/spt_guide000000182430/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.jalan.net/kankou/spt_guide000000182430/" alt="那須高原展望台 恋人の聖地 紹介ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-heart"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Romance</span><h4><svg class="ic"><use href="#i-heart"/></svg>恋人の聖地・展望台</h4><p>標高1048m、全国100番目の「恋人の聖地」。関東平野の夜景と、小窓のピエロの言い伝え。</p><div class="meta"><svg class="ic"><use href="#i-moon"/></svg>駐車場無料 / 夕景・夜景が白眉 ／ 宿から約30分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.nasu-ropeway.jp/enjoy/11" target="_blank" rel="noopener" style="--g1:#5f8a6e;--g2:#3a6450">
+      <div class="pcard-img"><img data-url="https://www.nasu-ropeway.jp/enjoy/11" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.nasu-ropeway.jp/enjoy/11" alt="つつじ吊橋 紹介ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-bridge"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Scenic</span><h4><svg class="ic"><use href="#i-bridge"/></svg>つつじ吊橋</h4><p>橋長130m・高さ38m。橋上から那須連山の絶景。県営駐車場100台無料、通年見学自由。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>無料 / 那須ICから約30分 ／ 宿から約30分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.nasu-ropeway.jp/enjoy/14" target="_blank" rel="noopener" style="--g1:#3f8a78;--g2:#2c5a4f">
+      <div class="pcard-img"><img data-url="https://www.nasu-ropeway.jp/enjoy/14" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.nasu-ropeway.jp/enjoy/14" alt="駒止の滝 紹介ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-droplet"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Hidden</span><h4><svg class="ic"><use href="#i-droplet"/></svg>駒止の滝</h4><p>幅約2m・高さ約20m、神秘的な滝つぼの「那須第一の滝」。観瀑台から見下ろす。秋は紅葉の名所。</p><div class="meta"><svg class="ic"><use href="#i-leaf"/></svg>駐車場近接 / 冬期除き見学可 ／ 宿から約35分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://nasu-oukoku.com/" target="_blank" rel="noopener" style="--g1:#356450;--g2:#264434">
+      <div class="pcard-img"><img data-url="https://nasu-oukoku.com/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://nasu-oukoku.com/" alt="那須どうぶつ王国 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-paw"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">All-weather</span><h4><svg class="ic"><use href="#i-paw"/></svg>那須どうぶつ王国</h4><p>屋内施設が充実し雨でも安心。カピバラ・アルパカ・鳥のショー。NOZARUが荒天の日の振替に最適。</p><div class="meta"><svg class="ic"><use href="#i-rain"/></svg>雨の日プランの本命 ／ 宿から約30分 ◯</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener" style="--g1:#cf9a5e;--g2:#b9763a">
+      <div class="pcard-img"><img data-url="https://www.minamigaoka.co.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.minamigaoka.co.jp/" alt="南ヶ丘牧場 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-icecream"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Pastoral</span><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場</h4><p>入場・駐車無料の老舗。ジャージー牛乳ソフト、釣り堀、乗馬、動物ふれあい。肩の力が抜ける時間。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>入場無料 / 年中無休 ／ 宿から約20分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.artbiotop.jp/water_garden" target="_blank" rel="noopener" style="--g1:#8699a0;--g2:#5f7f86">
+      <div class="pcard-img"><img data-url="https://www.artbiotop.jp/water_garden" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.artbiotop.jp/water_garden" alt="アートビオトープ那須 水庭 公式ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-water"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Art</span><h4><svg class="ic"><use href="#i-water"/></svg>アートビオトープ「水庭」</h4><p>石上純也設計、318本の樹木と160の池が織りなす静謐な庭。朝の光が最も美しい。</p><div class="meta"><svg class="ic"><use href="#i-info"/></svg>完全予約制（日帰り見学可） ／ 宿から約25分</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.shozo.co.jp/" target="_blank" rel="noopener" style="--g1:#7a6a58;--g2:#574a3c">
+      <div class="pcard-img"><img data-url="https://www.shozo.co.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.shozo.co.jp/" alt="1988 CAFE SHOZO 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-coffee"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Culture</span><h4><svg class="ic"><use href="#i-coffee"/></svg>1988 CAFE SHOZO（黒磯）</h4><p>那須が育てたカフェ文化の聖地。洗練された一杯と焼き菓子。最終日のブランチに。</p><div class="meta"><svg class="ic"><use href="#i-clock"/></svg>11:00–18:30 / 黒磯駅 徒歩10分 ／ 宿から約25〜30分</div></div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="food" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">River Fish &amp; Taste</p><h2>川魚と、食べる那須</h2><p>主役は釣りたての川魚。乳製品・チーズ・カフェまで、高原は美味しいものの宝庫です。各カードは公式へリンク。</p></div>
+  <div class="pgrid">
+
+    <a class="pcard reveal" href="https://www.seiryunosato.com/" target="_blank" rel="noopener" style="--g1:#2f7d8a;--g2:#2c5a4f">
+      <div class="pcard-img"><img data-url="https://www.seiryunosato.com/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.seiryunosato.com/" alt="那須高原 清流の里 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-fish"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">主役の川魚</span><h4><svg class="ic"><use href="#i-fish"/></svg>那須高原 清流の里</h4><p>釣った魚を炭火・天然塩で塩焼き／刺身に。手打ちそば・清流うどんも。竿200円・魚250円/100g・焼き250円。</p><div class="meta"><svg class="ic"><use href="#i-clock"/></svg>食事11:00–15:00 / 木曜定休</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://nasufish.com/" target="_blank" rel="noopener" style="--g1:#3f8a78;--g2:#2c5a4f">
+      <div class="pcard-img"><img data-url="https://nasufish.com/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://nasufish.com/" alt="那須フィッシュランド 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-fish"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">川魚（別案）</span><h4><svg class="ic"><use href="#i-fish"/></svg>那須フィッシュランド</h4><p>本格的な渓流管理釣り場。釣った魚を炭火塩焼き・オリジナル唐揚げで。初心者から上級者まで。</p><div class="meta"><svg class="ic"><use href="#i-pin"/></svg>那須塩原市</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.e-nkp.com/restaurant/" target="_blank" rel="noopener" style="--g1:#5f8a6e;--g2:#356450">
+      <div class="pcard-img"><img data-url="https://www.e-nkp.com/restaurant/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.e-nkp.com/restaurant/" alt="那須渓流パーク 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-fish"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">川魚（別案）</span><h4><svg class="ic"><use href="#i-fish"/></svg>那須渓流パーク</h4><p>園内のBBQ棟で、囲炉裏を囲んでイワナ・ヤマメの塩焼きや唐揚げを。グループにも。</p><div class="meta"><svg class="ic"><use href="#i-flame"/></svg>釣り＋囲炉裏</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://cheesegarden.jp/pages/honten" target="_blank" rel="noopener" style="--g1:#cf9a5e;--g2:#b9763a">
+      <div class="pcard-img"><img data-url="https://cheesegarden.jp/pages/honten" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://cheesegarden.jp/pages/honten" alt="チーズガーデン那須本店 公式ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-cheese"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Sweets</span><h4><svg class="ic"><use href="#i-cheese"/></svg>チーズガーデン 那須本店</h4><p>看板の御用邸チーズケーキ。カフェ併設で休憩にも、帰りのお土産にも鉄板。駐車150台。</p><div class="meta"><svg class="ic"><use href="#i-bag"/></svg>カフェ＆土産</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener" style="--g1:#cf9a5e;--g2:#a86a2e">
+      <div class="pcard-img"><img data-url="https://www.minamigaoka.co.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.minamigaoka.co.jp/" alt="南ヶ丘牧場 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-icecream"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Dairy</span><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場のソフト</h4><p>濃厚なジャージー牛乳ソフトクリーム。牧場の空気の中で食べるからおいしい。入場無料。</p><div class="meta"><svg class="ic"><use href="#i-leaf"/></svg>動物ふれあい・手づくり体験も</div></div>
+    </a>
+
+    <a class="pcard reveal" href="https://www.shozo.co.jp/" target="_blank" rel="noopener" style="--g1:#7a6a58;--g2:#574a3c">
+      <div class="pcard-img"><img data-url="https://www.shozo.co.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.shozo.co.jp/" alt="1988 CAFE SHOZO 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-coffee"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Cafe</span><h4><svg class="ic"><use href="#i-coffee"/></svg>1988 CAFE SHOZO</h4><p>黒磯のカフェ聖地。スコーンやケーキと丁寧な一杯。最終日のブランチにぴったり。</p><div class="meta"><svg class="ic"><use href="#i-clock"/></svg>11:00–18:30</div></div>
+    </a>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="stay" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Stay</p><h2>泊まる — ホテルエピナール那須に2連泊</h2><p>宿はエピナール那須に決定。拠点を一つに絞って2連泊、荷ほどきは一度きりで身軽に動けます。</p></div>
+
+  <a class="pcard stay-hero reveal" href="https://www.epinard.jp/" target="_blank" rel="noopener" style="--g1:#5f8a6e;--g2:#2c4a39">
+    <div class="pcard-img"><img data-url="https://www.epinard.jp/" src="https://image.thum.io/get/width/900/crop/700/noanimate/https://www.epinard.jp/" alt="ホテルエピナール那須 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-bed"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+    <div class="pcard-body">
+      <span class="chosen-badge"><svg class="ic"><use href="#i-check"/></svg>ご予約確定</span>
+      <h4><svg class="ic"><use href="#i-bed"/></svg>ホテルエピナール那須</h4>
+      <p>温泉とプールを備えた高原の大型リゾート。食事は和洋中バイキング、地上50mのフレンチ、日本料理「和匠ダイニング 菜す乃」など。ネイチャーツアーや動物ふれあいのフォレストエリアもあり、滞在そのものが楽しい。ここに2連泊して、毎日“帰ってくる”安心感を。</p>
+      <div class="stay-facts"><span>温泉・露天</span><span>室内プール</span><span>和洋中100種バイキング</span><span>地上50mのフレンチ</span><span>ネイチャーツアー</span></div>
+      <div class="booking">
+        <div class="brow"><span class="bk">日程</span><span class="bv">2026/7/14(火) 16:00 イン → 7/16(木) アウト・2泊</span></div>
+        <div class="brow"><span class="bk">部屋</span><span class="bv">メインタワー デラックス／洋室・禁煙・53㎡</span></div>
+        <div class="brow"><span class="bk">プラン</span><span class="bv">人気No.1・和洋中100種の豪華バイキング</span></div>
+        <div class="brow"><span class="bk">人数</span><span class="bv">大人2名</span></div>
+        <div class="brow"><span class="bk">料金</span><span class="bv">¥78,400（税込・2泊2名）</span></div>
+      </div>
+      <div class="meta"><svg class="ic"><use href="#i-pin"/></svg>那須町高久丙1 ／ りんどう湖まで車10分・どうぶつ王国/ハイランドパーク車30分　<svg class="ic"><use href="#i-ext"/></svg>公式サイトを開く</div>
+    </div>
+  </a>
+
+  <div class="stay-note">
+    <div class="snote reveal"><h4><svg class="ic"><use href="#i-leaf"/></svg>夏ならではの館内体験</h4><p>時期によっては「あじさい＆ゆり鑑賞ツアー」など季節の催しも（〜7月中旬頃・要確認）。雨や夕立の午後の“逃げ場”にもなり、館内だけで一日過ごせる懐の深さ。</p></div>
+    <div class="snote reveal"><h4><svg class="ic"><use href="#i-car"/></svg>拠点としての位置</h4><p>那須ICや那須ガーデンアウトレットに近い麓寄りの立地。NOZARU・清流の里・茶臼岳へは山を少し上がる形（各25〜40分目安）。行き帰りの買い物や食事にも便利。</p></div>
+  </div>
+
+  <p class="alt-label">参考：比較した他の宿</p>
+  <div class="pgrid">
+    <a class="pcard reveal" href="https://risonare.com/nasu/" target="_blank" rel="noopener" style="--g1:#356450;--g2:#264434">
+      <div class="pcard-img"><img data-url="https://risonare.com/nasu/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://risonare.com/nasu/" alt="リゾナーレ那須 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-bed"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Luxury</span><h4><svg class="ic"><use href="#i-bed"/></svg>リゾナーレ那須</h4><p>星野リゾートのアグリツーリズモ。畑・温泉・自然体験。記念日に格上げしたいとき用に。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>目安 ¥30,000〜/人</div></div>
+    </a>
+    <a class="pcard reveal" href="https://www.omaru.co.jp/" target="_blank" rel="noopener" style="--g1:#2f6d72;--g2:#244a4a">
+      <div class="pcard-img"><img data-url="https://www.omaru.co.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.omaru.co.jp/" alt="大丸温泉旅館 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-onsen"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">秘湯</span><h4><svg class="ic"><use href="#i-onsen"/></svg>大丸温泉旅館</h4><p>川がそのまま大露天になる奥那須の秘湯。1泊だけ趣を変えたくなったら。</p><div class="meta"><svg class="ic"><use href="#i-pin"/></svg>那須ICから約25分</div></div>
+    </a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="dist" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Distances</p><h2>宿を起点に — 各スポットへの距離</h2><p>拠点はエピナール那須（那須町高久丙1）。下の所要はカーナビ等での目安です。<strong>◯＝公式の案内</strong>、その他は那須街道の距離からの概算。</p></div>
+  <div class="dist-hub reveal">
+    <div class="hubic"><svg class="ic"><use href="#i-bed"/></svg></div>
+    <div><h4>拠点：ホテルエピナール那須</h4><p>栃木県那須郡那須町大字高久丙1 ／ 東北道 那須ICから車で約10分・麓寄りの立地</p></div>
+    <span class="badge">那須IC 約10分 ◯</span>
+  </div>
+  <div class="dist-band reveal"><div class="bl">すぐ近く<small>〜15分・麓エリア</small></div><div class="dchips">
+    <span class="dchip"><svg class="ic"><use href="#i-cheese"/></svg>チーズガーデン本店<span class="v">約10分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-leaf"/></svg>りんどう湖<span class="v">約10分 ◯</span></span>
+  </div></div>
+  <div class="dist-band reveal"><div class="bl">高久乙・湯本下部<small>約20〜30分</small></div><div class="dchips">
+    <span class="dchip"><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場<span class="v">約20分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-fish"/></svg>清流の里<span class="v">約25分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-water"/></svg>アートビオトープ水庭<span class="v">約25分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-volcano"/></svg>殺生石<span class="v">約25分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-zip"/></svg>NOZARU／ハイランドパーク<span class="v">約30分 ◯</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-paw"/></svg>那須どうぶつ王国<span class="v">約30分 ◯</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-heart"/></svg>恋人の聖地展望台<span class="v">約30分</span></span>
+  </div></div>
+  <div class="dist-band reveal"><div class="bl">山の上<small>約30〜40分</small></div><div class="dchips">
+    <span class="dchip"><svg class="ic"><use href="#i-bridge"/></svg>つつじ吊橋<span class="v">約30分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-ropeway"/></svg>ロープウェイ・茶臼岳<span class="v">約35分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-droplet"/></svg>駒止の滝<span class="v">約35分</span></span>
+  </div></div>
+  <div class="dist-band reveal"><div class="bl">黒磯方面<small>別方向・最終日</small></div><div class="dchips">
+    <span class="dchip"><svg class="ic"><use href="#i-coffee"/></svg>1988 CAFE SHOZO<span class="v">約25〜30分</span></span>
+  </div></div>
+  <p class="budget-note reveal"><svg class="ic"><use href="#i-info"/></svg>◯印は公式の案内（那須IC約10分／りんどう湖10分／どうぶつ王国・ハイランドパーク各30分）。その他は那須街道沿いの距離からの概算で、時間帯・天候・渋滞で前後します。出発前にカーナビで最新の所要をご確認ください。</p>
+</section>
+
+<hr class="divider">
+
+<section id="budget" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Budget</p><h2>予算のめやす（2人・2泊3日）</h2><p>あくまで概算。時季・宿・施設で変動します。予約前に最新の料金を必ず確認してください。</p></div>
+  <div class="grid g2">
+    <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-car"/></svg></div><h4>交通（2人ぶん）</h4><p>高速 往復 約10,000〜12,000円 ＋ ガソリン（往復約500km）＋ 駐車場（多くは無料）。SA飲食を別途。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 15,000〜20,000円</div></div>
+    <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-bed"/></svg></div><h4>宿（エピナール那須・予約確定）</h4><p>メインタワー デラックス53㎡、和洋中100種バイキングの夕食付き（2食付きプラン）。大人2名・2泊で確定済み。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>¥78,400（税込・確定）</div></div>
+    <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-zip"/></svg></div><h4>体験（2人ぶん）</h4><p>NOZARU 9,200円 ＋ ロープウェイ往復 4,000円 ＋ 清流の里（竿・魚・焼き 〜3,000円）＋ 水庭見学・牧場など。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 20,000〜26,000円</div></div>
+    <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-cheese"/></svg></div><h4>外食・カフェ・土産</h4><p>夕朝食は宿プランに含むので、外で払うのは昼×3・カフェ・川魚・お土産が中心。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 15,000〜25,000円</div></div>
+  </div>
+  <p class="budget-note reveal"><svg class="ic"><use href="#i-info"/></svg>合計の目安：宿 ¥78,400（確定）＋ 交通 約1.5〜2万 ＋ 体験 約2〜2.6万 ＋ 外食・土産 約1.5〜2.5万 ＝ 2人で総額およそ13〜16万円。交通費を2人で按分すると、一人あたりの体感はぐっと下がります。</p>
+</section>
+
+<hr class="divider">
+
+<section id="pack" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Checklist</p><h2>持ち物チェックリスト</h2><p>タップでチェック。状態はこの端末に保存されます。出発前にふたりで確認を。</p></div>
+  <div class="check-cols">
+    <div class="ci-group reveal">
+      <h4><svg class="ic"><use href="#i-car"/></svg>車・移動</h4>
+      <label class="ck"><input type="checkbox" data-ck="d1"><span class="box"></span><span class="txt">ETCカード・運転免許証</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d2"><span class="box"></span><span class="txt">スマホホルダー・充電ケーブル</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d3"><span class="box"></span><span class="txt">車内のおやつ・飲み物・プレイリスト</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d4"><span class="box"></span><span class="txt">酔い止め（山岳路対策）</span></label>
+    </div>
+    <div class="ci-group reveal">
+      <h4><svg class="ic"><use href="#i-sunrise"/></svg>夏の高原</h4>
+      <label class="ck"><input type="checkbox" data-ck="d5"><span class="box"></span><span class="txt">薄手の上着（朝晩・山頂は涼しい）</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d6"><span class="box"></span><span class="txt">レインウェア／折り畳み傘（夕立・雷）</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d7"><span class="box"></span><span class="txt">帽子・日焼け止め・サングラス</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d8"><span class="box"></span><span class="txt">虫除けスプレー</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d9"><span class="box"></span><span class="txt">歩きやすい靴（山頂は岩場）</span></label>
+    </div>
+    <div class="ci-group reveal">
+      <h4><svg class="ic"><use href="#i-fish"/></svg>NOZARU・川魚</h4>
+      <label class="ck"><input type="checkbox" data-ck="d10"><span class="box"></span><span class="txt">NOZARU用：動きやすい服・スニーカー・軍手・髪ゴム</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d11"><span class="box"></span><span class="txt">清流の里用の現金・手拭きタオル</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d12"><span class="box"></span><span class="txt">着替え2日分（2泊）</span></label>
+    </div>
+    <div class="ci-group reveal">
+      <h4><svg class="ic"><use href="#i-info"/></svg>温泉・予約・記録</h4>
+      <label class="ck"><input type="checkbox" data-ck="d13"><span class="box"></span><span class="txt">現金（牧場・釣り堀・共同浴場）</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d14"><span class="box"></span><span class="txt">常備薬・絆創膏</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d15"><span class="box"></span><span class="txt">NOZARU・水庭・宿の予約確認</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d16"><span class="box"></span><span class="txt">ロープウェイ運行・清流の里(木曜定休)の確認</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d17"><span class="box"></span><span class="txt">カメラ・モバイルバッテリー・ゴミ袋</span></label>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="tips" class="wrap">
+  <div class="sec-head reveal"><p class="eyebrow">Good to Know</p><h2>旅の心得</h2></div>
+  <div class="tips">
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-zip"/></svg></div><div><h4>NOZARUは予約優先</h4><p>当日受付も可だが予約推奨。身長130cm以上、動きやすい服とスニーカーで。雨天・荒天は安全のため中止のことも（要確認）。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-fish"/></svg></div><div><h4>清流の里は15時まで・木曜定休</h4><p>釣り堀9:00〜15:00、食事11:00〜15:00。木曜（祝日除く）と元日は休み。最終日7/16が木曜のため、清流の里は初日7/14に配置済み。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-rain"/></svg></div><div><h4>夏は夕立・雷に注意</h4><p>午後はにわか雨や落雷が出やすい。NOZARUなど外遊びは午前に寄せ、午後は屋内（美術・カフェ・どうぶつ王国）を一枚用意。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-ropeway"/></svg></div><div><h4>ロープウェイは風次第</h4><p>強風で運休することあり。当日の運行状況を出発前に確認。雨なら殺生石やカフェへ。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-water"/></svg></div><div><h4>水庭は完全予約制</h4><p>アートビオトープの水庭見学は事前予約が必要。日時を早めに押さえて。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-leaf"/></svg></div><div><h4>虫除け・日焼け対策を</h4><p>夏の高原は虫も日差しもそれなり。虫除け・日焼け止め・帽子で快適に。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-clock"/></svg></div><div><h4>平日・連休前でゆったり</h4><p>今回の7/14〜16（火〜木）は平日かつ海の日連休(7/20頃)の前。道も施設も比較的すいている見込み。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-info"/></svg></div><div><h4>営業日・料金は要確認</h4><p>本ページの時刻・料金はすべて目安。最新情報は各スポットの公式サイト（カードのリンク）でご確認を。</p></div></div>
+  </div>
+</section>
+
+</main>
+
+<div class="closing">
+  <div class="wrap">
+    <p class="eyebrow">For the Two of You</p>
+    <blockquote>樹上の風、釣りたての川魚、火山と湯けむり、満天の星。<br>那須の三日間が、ふたりの“好き”をいくつも増やしますように。</blockquote>
+    <p class="sig">— Have a wonderful trip</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">那須高原 / ふたりの休日 — 2泊3日</div>
+    <p class="disc"><svg class="ic"><use href="#i-info"/></svg>記載の所要時間・料金・営業日・予約要否はすべて目安です。お出かけ前に各スポットの公式サイト（カードのリンク先）で最新情報をご確認ください。スポット画像は各公式ページのライブプレビューを表示しています。旅行日：2026年7月14日(火)〜16日(木)・2泊3日。プラン作成日：2026年6月20日。</p>
+  </div>
+</footer>
+
+<script>
+  // image fallback: thum.io -> WordPress mShots -> branded gradient tile
+  function imgFB(img){
+    if(!img.dataset.fb){
+      img.dataset.fb='1';
+      img.src='https://s0.wp.com/mshots/v1/'+encodeURIComponent(img.dataset.url)+'?w=800';
+    } else {
+      img.style.display='none';
+    }
+  }
+
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var targets = document.querySelectorAll('.reveal, .day');
+
+    function revealIndex(el){
+      var p = el.parentNode; if(!p) return 0;
+      var sibs = Array.prototype.filter.call(p.children, function(c){ return c.classList.contains('reveal'); });
+      var i = sibs.indexOf(el); return i < 0 ? 0 : i;
+    }
+
+    if(reduce || !('IntersectionObserver' in window)){
+      targets.forEach(function(el){ el.classList.add('is-in'); });
+    } else {
+      var ro = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(!e.isIntersecting) return;
+          var el = e.target;
+          if(el.classList.contains('reveal')){
+            el.style.animationDelay = Math.min(revealIndex(el), 8) * 70 + 'ms';
+            el.addEventListener('animationend', function(){ el.style.animation = 'none'; el.style.opacity = '1'; }, {once:true});
+          }
+          el.classList.add('is-in');
+          ro.unobserve(el);
+        });
+      }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+      targets.forEach(function(el){ ro.observe(el); });
+    }
+
+    // scroll progress bar
+    var prog = document.getElementById('scrollprog');
+    var ticking = false;
+    function onScroll(){
+      if(ticking) return; ticking = true;
+      requestAnimationFrame(function(){
+        var de = document.documentElement, max = de.scrollHeight - de.clientHeight;
+        if(prog) prog.style.transform = 'scaleX(' + (max > 0 ? de.scrollTop / max : 0) + ')';
+        ticking = false;
+      });
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    var chips = Array.prototype.slice.call(document.querySelectorAll('#chips .chip'));
+    var map = {};
+    chips.forEach(function(c){ map[c.getAttribute('href').slice(1)] = c; });
+    var secs = document.querySelectorAll('section[id]');
+    if('IntersectionObserver' in window){
+      var so = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            chips.forEach(function(c){c.classList.remove('active');});
+            var c = map[e.target.id];
+            if(c){ c.classList.add('active'); c.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'}); }
+          }
+        });
+      }, {rootMargin:'-45% 0px -50% 0px'});
+      secs.forEach(function(s){ so.observe(s); });
+    }
+
+    var KEY='nasu-plan-checklist-v2';
+    var saved={};
+    try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ saved={}; }
+    document.querySelectorAll('input[data-ck]').forEach(function(box){
+      var id=box.getAttribute('data-ck');
+      if(saved[id]) box.checked=true;
+      box.addEventListener('change', function(){
+        saved[id]=box.checked;
+        try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(e){}
+      });
+    });
+  })();
+</script>
+</body>
+</html>
