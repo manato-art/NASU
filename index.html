@@ -67,7 +67,12 @@
   #atmos .orb2{width:640px;height:640px;top:-180px;right:-180px;opacity:.16;background:radial-gradient(circle,#8699a0,transparent 70%);animation:orbB 37s ease-in-out infinite alternate}
   #atmos .orb3{width:480px;height:480px;top:46%;left:-170px;opacity:.14;background:radial-gradient(circle,#cf9a5e,transparent 70%);animation:orbC 33s ease-in-out infinite alternate}
   #atmos .orb4{width:560px;height:560px;bottom:-200px;right:-120px;opacity:.17;background:radial-gradient(circle,#5f8a6e,transparent 70%);animation:orbD 35s ease-in-out infinite alternate}
-  #atmos .topo{position:absolute;inset:0;width:100%;height:100%;color:var(--moor);opacity:.06}
+  #atmos .topo{position:absolute;inset:0;width:100%;height:100%;color:var(--moor);opacity:.09}
+  #atmos .ridge{position:absolute;left:0;right:0;bottom:0;width:100%;height:44vh;opacity:.65;pointer-events:none}
+  #atmos .ridge .r1{fill:#8699a0;opacity:.14}
+  #atmos .ridge .r2{fill:#5f8a6e;opacity:.16}
+  #atmos .ridge .r3{fill:#2c4a39;opacity:.18}
+  #atmos .vignette{position:absolute;inset:0;background:radial-gradient(125% 100% at 50% 36%,transparent 50%,rgba(32,44,34,.13) 100%)}
   @keyframes orbA{to{transform:translate(60px,46px) scale(1.12)}}
   @keyframes orbB{to{transform:translate(-54px,54px) scale(1.08)}}
   @keyframes orbC{to{transform:translate(74px,-44px) scale(1.14)}}
@@ -118,9 +123,44 @@
   .rstep{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
   .rstep:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
   .dchip{transition:transform .25s ease,border-color .25s ease,background .25s ease}
-  .dchip:hover{transform:translateY(-2px);border-color:var(--moor-2)}
+  .dchip:hover{transform:translateY(-2px) rotate(-1.2deg);border-color:var(--moor-2);background:rgba(255,255,255,.85)}
   .pcard-ext{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
   .pcard:hover .pcard-ext{transform:rotate(8deg) scale(1.08)}
+
+  /* playful details */
+  #progcar{position:fixed;top:4px;left:0;z-index:61;width:24px;height:24px;color:var(--moor);transform:translateX(-30px);will-change:transform;pointer-events:none;filter:drop-shadow(0 1px 2px rgba(32,36,30,.35))}
+  #progcar .ic{width:100%;height:100%;stroke-width:1.8}
+  #toTop{position:fixed;right:18px;bottom:18px;z-index:50;width:48px;height:48px;border-radius:14px;border:1px solid rgba(248,242,228,.25);background:var(--moor);color:var(--milk);display:grid;place-items:center;box-shadow:var(--shadow-lg);cursor:pointer;opacity:0;transform:translateY(14px);transition:opacity .35s ease,transform .35s ease,background .25s ease;pointer-events:none}
+  #toTop.show{opacity:1;transform:none;pointer-events:auto}
+  #toTop:hover{background:var(--moor-2);transform:translateY(-2px)}
+  #toTop .ic{font-size:1.3rem}
+  @keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.28)}24%{transform:scale(1)}36%{transform:scale(1.16)}48%{transform:scale(1)}}
+  .heart .ic{animation:heartbeat 2.8s ease-in-out infinite;transform-origin:center}
+  @keyframes popBox{0%{transform:scale(1)}45%{transform:scale(1.22)}100%{transform:scale(1)}}
+  .ck input:checked + .box{animation:popBox .32s cubic-bezier(.34,1.56,.64,1)}
+  .card .ci,.fitem .fi,.tip .ti{transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+  .card:hover .ci{transform:rotate(-6deg) scale(1.07)}
+  .tip:hover .ti{transform:rotate(6deg)}
+  .season{position:relative;overflow:hidden}
+  .season.now::after{content:"";position:absolute;top:-30%;left:-60%;width:40%;height:160%;background:linear-gradient(100deg,transparent,rgba(248,242,228,.14),transparent);transform:rotate(8deg);animation:sheen 5.5s ease-in-out infinite}
+  @keyframes sheen{0%,60%,100%{transform:translateX(0) rotate(8deg)}30%{transform:translateX(420%) rotate(8deg)}}
+
+  /* falling leaves */
+  #atmos .leaf{position:absolute;top:0;pointer-events:none;will-change:transform;animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+  #atmos .leaf svg{width:100%;height:100%;display:block;fill:currentColor}
+  @keyframes fall{0%{transform:translate3d(0,-14vh,0) rotate(0);opacity:0}8%{opacity:.42}90%{opacity:.3}100%{transform:translate3d(var(--x,50px),116vh,0) rotate(var(--r,300deg));opacity:0}}
+  /* hero clouds + gondola */
+  .cloud{animation:cloudDrift linear infinite}
+  .cloud1{animation-duration:46s}
+  .cloud2{animation-duration:64s;animation-delay:-22s}
+  @keyframes cloudDrift{from{transform:translateX(-180px)}to{transform:translateX(1640px)}}
+  .gondola{animation:glide 13s ease-in-out infinite}
+  @keyframes glide{0%,100%{transform:translate(-95px,56px)}50%{transform:translate(95px,-56px)}}
+  /* checklist celebration */
+  #packDone{margin-top:22px;text-align:center;font-family:var(--font-display);font-weight:700;color:var(--moor);font-size:1.15rem;display:flex;align-items:center;justify-content:center;gap:12px;opacity:0;transform:scale(.82);transition:opacity .45s ease,transform .45s cubic-bezier(.34,1.56,.64,1);pointer-events:none}
+  #packDone.show{opacity:1;transform:scale(1)}
+  #packDone .ic{color:var(--copper);font-size:1.2rem;animation:sparkleSpin 2s ease-in-out infinite}
+  @keyframes sparkleSpin{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.3) rotate(25deg)}}
 
   /* timeline draw, items & dots (triggered by .day.is-in) */
   .day.is-in .day-tag,.day.is-in .tl{animation:revealUp .55s cubic-bezier(.2,.75,.25,1) both}
@@ -139,10 +179,12 @@
 
   section{padding:74px 0;scroll-margin-top:74px;position:relative}
   .sec-head{margin-bottom:36px;max-width:44em}
-  .sec-head .eyebrow{font-size:.84rem}
+  .sec-head .eyebrow{font-size:.84rem;display:inline-flex;align-items:center;gap:10px}
+  .sec-head .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--copper);opacity:.65}
   .sec-head h2{font-family:var(--font-display);font-weight:700;color:var(--moor);font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.25;margin:.28em 0 .35em;letter-spacing:.02em}
   .sec-head p{color:var(--ink-soft);font-size:1rem;margin:0}
-  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent);border:0;max-width:var(--maxw);margin:0 auto}
+  .divider{position:relative;height:1px;background:linear-gradient(90deg,transparent,var(--line) 18%,var(--line) 82%,transparent);border:0;max-width:var(--maxw);margin:0 auto;overflow:visible}
+  .divider::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;background:var(--paper);border:1.5px solid var(--copper-soft);transform:translate(-50%,-50%) rotate(45deg)}
 
   .lede{font-size:1.14rem;line-height:2;color:var(--ink);max-width:42em}
   .lede .em{font-family:var(--font-display);color:var(--moor);font-weight:600}
@@ -176,14 +218,15 @@
   /* timeline */
   .day{margin-bottom:50px}
   .day-tag{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
-  .day-tag .d{font-family:var(--font-latin);font-style:italic;font-size:2.3rem;color:var(--copper);line-height:1}
+  .day-tag .d{font-family:var(--font-latin);font-style:italic;font-size:1.4rem;font-weight:600;color:var(--copper);line-height:1;border:1.6px dashed var(--copper-soft);border-radius:12px;padding:9px 14px;transform:rotate(-3deg);background:rgba(207,154,94,.08);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+  .day:hover .day-tag .d{transform:rotate(2deg) scale(1.04)}
   .day-tag h3{font-family:var(--font-display);font-size:1.45rem;color:var(--moor);margin:0;font-weight:700}
   .day-tag .sub{color:var(--ink-soft);font-size:.9rem;margin-left:auto}
   .timeline{position:relative;margin-top:24px;padding-left:6px}
   .timeline::before{content:"";position:absolute;left:78px;top:10px;bottom:10px;width:2px;background:linear-gradient(180deg,var(--copper-soft),var(--moor-2));opacity:.5}
   .tl{display:grid;grid-template-columns:78px 1fr;gap:20px;position:relative;padding:9px 0}
-  .tl .time{font-family:var(--font-latin);font-weight:600;color:var(--moor);font-size:1.02rem;text-align:right;padding-top:13px;letter-spacing:.02em}
-  .tl .body{position:relative;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);transition:.3s}
+  .tl .time{font-family:var(--font-latin);font-weight:600;color:var(--moor);font-size:.92rem;text-align:center;letter-spacing:.02em;background:var(--milk);border:1px solid var(--line);border-radius:999px;padding:5px 2px;height:fit-content;margin-top:9px;box-shadow:var(--shadow)}
+  .tl .body{position:relative;background:rgba(255,255,255,.74);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);transition:.3s}
   .tl .body:hover{transform:translateX(4px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
   .tl .body::before{content:"";position:absolute;left:-31px;top:20px;width:13px;height:13px;border-radius:50%;background:var(--milk);border:3px solid var(--copper);box-shadow:0 0 0 4px var(--paper)}
   .tl h4{margin:0 0 4px;font-family:var(--font-display);color:var(--ink);font-size:1.08rem;font-weight:600;display:flex;align-items:center;gap:9px}
@@ -204,7 +247,7 @@
 
   /* photo cards (linked) */
   .pgrid{display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
-  .pcard{display:flex;flex-direction:column;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.35s;color:inherit;text-decoration:none;position:relative}
+  .pcard{display:flex;flex-direction:column;background:rgba(255,255,255,.74);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.35s;color:inherit;text-decoration:none;position:relative}
   .pcard:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
   .pcard:hover .pcard-img img{transform:scale(1.05)}
   .pcard-img{position:relative;aspect-ratio:4/3;background:linear-gradient(140deg,var(--g1,#356450),var(--g2,#264434));overflow:hidden;display:grid;place-items:center}
@@ -248,7 +291,7 @@
   /* budget */
   .grid{display:grid;gap:18px}
   .grid.g2{grid-template-columns:repeat(2,1fr)}
-  .card{background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:.35s;display:flex;flex-direction:column}
+  .card{background:rgba(255,255,255,.74);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:.35s;display:flex;flex-direction:column}
   .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--moor-2)}
   .card .ci{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:var(--moor);color:var(--milk);margin-bottom:14px}
   .card .ci .ic{font-size:1.35rem;stroke-width:1.5}
@@ -269,7 +312,7 @@
   .dist-band .bl{font-family:var(--font-display);color:var(--moor);font-size:.96rem;font-weight:700;padding-top:5px}
   .dist-band .bl small{display:block;font-family:var(--font-body);font-weight:400;color:var(--ash);font-size:.74rem}
   .dchips{display:flex;flex-wrap:wrap;gap:8px}
-  .dchip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:.84rem;color:var(--ink)}
+  .dchip{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.74);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:.84rem;color:var(--ink)}
   .dchip .ic{color:var(--moor-2);font-size:1.05rem}
   .dchip .v{color:var(--moor);font-size:.78rem;background:rgba(38,68,52,.08);padding:1px 7px;border-radius:6px;margin-left:3px;white-space:nowrap}
   @media(max-width:560px){.dist-band{grid-template-columns:1fr;gap:8px}}
@@ -332,7 +375,9 @@
     .tl .body::before{transform:scale(1)!important}
     .hero-smoke,.hero-sun,#atmos .orb{animation:none!important}
     .pcard:hover .pcard-img img{transform:none}
-    #scrollprog{display:none}
+    #scrollprog,#progcar{display:none}
+    .heart .ic,.season.now::after,.cloud,.gondola,#packDone .ic{animation:none!important}
+    #atmos .leaf{display:none}
   }
   @media print{
     .nav,.hero-art,.hero-veil{display:none!important}
@@ -348,12 +393,19 @@
 <body>
 
 <div id="scrollprog" aria-hidden="true"></div>
+<div id="progcar" aria-hidden="true"><svg class="ic"><use href="#i-car"/></svg></div>
 
 <div id="atmos" aria-hidden="true">
   <span class="orb orb1"></span>
   <span class="orb orb2"></span>
   <span class="orb orb3"></span>
   <span class="orb orb4"></span>
+  <span class="leaf" style="left:8%;width:16px;height:16px;--x:70px;--r:300deg;color:#b9763a;animation-duration:18s;animation-delay:-2s"><svg viewBox="0 0 24 24"><use href="#i-leaf2"/></svg></span>
+  <span class="leaf" style="left:24%;width:12px;height:12px;--x:-50px;--r:-260deg;color:#5f8a6e;animation-duration:22s;animation-delay:-9s"><svg viewBox="0 0 24 24"><use href="#i-leaf2"/></svg></span>
+  <span class="leaf" style="left:46%;width:18px;height:18px;--x:90px;--r:340deg;color:#cf9a5e;animation-duration:16s;animation-delay:-13s"><svg viewBox="0 0 24 24"><use href="#i-leaf2"/></svg></span>
+  <span class="leaf" style="left:63%;width:14px;height:14px;--x:-70px;--r:-300deg;color:#356450;animation-duration:20s;animation-delay:-5s"><svg viewBox="0 0 24 24"><use href="#i-leaf2"/></svg></span>
+  <span class="leaf" style="left:80%;width:15px;height:15px;--x:60px;--r:280deg;color:#b9763a;animation-duration:24s;animation-delay:-17s"><svg viewBox="0 0 24 24"><use href="#i-leaf2"/></svg></span>
+  <span class="leaf" style="left:92%;width:11px;height:11px;--x:-40px;--r:-320deg;color:#5f8a6e;animation-duration:19s;animation-delay:-11s"><svg viewBox="0 0 24 24"><use href="#i-leaf2"/></svg></span>
   <svg class="topo" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="currentColor" stroke-width="1.1">
     <path d="M-40 110 C 240 50 460 170 720 120 S 1180 50 1480 120"/>
     <path d="M-40 240 C 260 180 520 300 760 250 S 1220 190 1480 250"/>
@@ -362,7 +414,15 @@
     <path d="M-40 650 C 240 600 520 710 760 650 S 1220 590 1480 660"/>
     <path d="M-40 790 C 260 740 540 850 800 790 S 1240 740 1480 800"/>
     <path d="M-40 920 C 240 880 520 980 760 920 S 1220 870 1480 930"/>
+    <g transform="translate(1150 280)"><circle r="34"/><circle r="68"/><circle r="108"/><circle r="154"/><circle r="204"/></g>
+    <g transform="translate(240 730)"><circle r="26"/><circle r="56"/><circle r="92"/><circle r="136"/></g>
   </g></svg>
+  <svg class="ridge" viewBox="0 0 1440 340" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path class="r1" d="M0 150 L200 70 L400 140 L620 55 L840 135 L1080 60 L1300 140 L1440 95 L1440 340 L0 340Z"/>
+    <path class="r2" d="M0 205 L180 120 L380 195 L600 100 L820 185 L1060 110 L1280 195 L1440 140 L1440 340 L0 340Z"/>
+    <path class="r3" d="M0 262 L240 195 L460 262 L680 185 L900 262 L1160 198 L1440 255 L1440 340 L0 340Z"/>
+  </svg>
+  <span class="vignette"></span>
 </div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -399,6 +459,7 @@
   <symbol id="i-zip" viewBox="0 0 24 24"><path d="M3 5l18 9"/><circle cx="11.2" cy="9.6" r="1.5"/><path d="M11.2 11.1v2.4M11.2 13.5c-1.6 0-2.2 1.6-1.1 3.3M11.2 13.5c1.6 0 2.2 1.6 1.1 3.3"/></symbol>
   <symbol id="i-fish" viewBox="0 0 24 24"><path d="M3 12c3.5-5 10.5-5 14 0-3.5 5-10.5 5-14 0z"/><path d="M17 12l4-3v6z"/><circle cx="7.5" cy="11" r=".7"/></symbol>
   <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+  <symbol id="i-leaf2" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19C5 10.7 10.7 5 19 5c0 8.3-5.7 14-14 14z"/><path d="M7.5 16.5C11 13 13.5 11 16.5 8.5" stroke="rgba(255,255,255,.35)" stroke-width="1" fill="none"/></symbol>
 </defs></svg>
 
 <nav class="nav">
@@ -433,6 +494,8 @@
     <rect width="1440" height="560" fill="url(#sky)"/>
     <circle cx="1090" cy="150" r="150" fill="url(#sun)"/>
     <circle class="hero-sun" cx="1090" cy="150" r="46" fill="#f5e3c2" opacity="0.85"/>
+    <ellipse class="cloud cloud1" cx="0" cy="118" rx="82" ry="24" fill="#ffffff" opacity="0.45"/>
+    <ellipse class="cloud cloud2" cx="0" cy="205" rx="56" ry="16" fill="#ffffff" opacity="0.3"/>
     <path d="M0 300 L150 250 L320 290 L500 235 L680 285 L880 240 L1080 295 L1280 250 L1440 290 L1440 560 L0 560 Z" fill="url(#far)" opacity="0.7"/>
     <rect x="0" y="300" width="1440" height="70" fill="#f3efe6" opacity="0.35"/>
     <path d="M0 360 L220 320 L430 365 L640 318 L860 368 L1080 330 L1300 372 L1440 345 L1440 560 L0 560 Z" fill="url(#mid)" opacity="0.85"/>
@@ -442,7 +505,7 @@
     <path d="M0 430 L260 388 L520 432 L780 392 L1040 436 L1300 398 L1440 430 L1440 560 L0 560 Z" fill="url(#near)"/>
     <g fill="#1c3024" opacity="0.9"><path d="M140 470 l14 -34 l14 34 z"/><path d="M170 466 l8 -22 l8 22 z"/><path d="M1230 478 l16 -38 l16 38 z"/><path d="M1180 484 l12 -30 l12 30 z"/></g>
     <line x1="640" y1="404" x2="900" y2="250" stroke="#1c3024" stroke-width="1.4" opacity="0.4"/>
-    <rect x="752" y="320" width="16" height="11" rx="2" fill="#1c3024" opacity="0.55" transform="rotate(-30 760 325)"/>
+    <g class="gondola"><rect x="752" y="320" width="16" height="11" rx="2" fill="#1c3024" opacity="0.55" transform="rotate(-30 760 325)"/></g>
   </svg>
   <div class="hero-veil"></div>
   <div class="hero-inner">
@@ -519,22 +582,15 @@
   <div class="sec-head reveal"><p class="eyebrow">The Itinerary</p><h2>2泊3日の道のり</h2><p>「午前は山と外遊び（夕立前）、午後はゆるめる」が黄金律。時刻はすべて目安、ふたりのペースで前後させてOK。</p></div>
 
   <div class="day">
-    <div class="day-tag"><span class="d">Day 1</span><h3>登って、釣って、湯にとける</h3><span class="sub">7/14(火)・走行 → NOZARU → 川魚 → 温泉</span></div>
+    <div class="day-tag"><span class="d">Day 1</span><h3>火山を望み、湯にとける</h3><span class="sub">7/14(火)・走行 → 茶臼岳 → 夜景</span></div>
     <div class="timeline">
       <div class="tl"><div class="time">6:30</div><div class="body"><h4><svg class="ic"><use href="#i-car"/></svg>新杉田を出発</h4><p>渋滞前に首都高を抜ける。プレイリストと飲み物を用意して、ドライブもデートの一部に。</p></div></div>
       <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>SAで休憩</h4><p>佐野・蓮田など。朝のSAグルメで小休止。運転を交代できるなら交代を。</p></div></div>
-      <div class="tl"><div class="time">10:00</div><div class="body"><h4><svg class="ic"><use href="#i-pin"/></svg>那須着 → NOZARUへ</h4><p>着いたら今日の主役へ直行。<a class="inl" href="https://nozaru.net/nozaru/" target="_blank" rel="noopener">NOZARU</a>受付へ（予約していればスムーズ。営業8:30〜17:00）。</p></div></div>
-      <div class="tl"><div class="time">10:30</div><div class="body">
-        <h4><svg class="ic"><use href="#i-zip"/></svg>NOZARU — 森の空中アスレチック（主役）</h4>
-        <p>樹上10m超を、ワイヤーで渡る巨大アスレチック。8コース72エレメント、100m超のジップラインも。声をかけ合って一緒にクリアする、最高の共同作戦。</p>
-        <div class="weather">
-          <div class="wcard sun"><div class="wt"><svg class="ic"><use href="#i-zip"/></svg>決行（晴れ）</div><p>大人4,600円・身長130cm以上。予約優先。動きやすい服とスニーカーで。所要は目安2〜3時間ほど（要確認）。</p></div>
-          <div class="wcard rain"><div class="wt"><svg class="ic"><use href="#i-rain"/></svg>振替（雨・雷）</div><p>夏の午後は夕立・落雷も。荒天時は中止のことがあるので、屋内の<a class="inl" href="https://nasu-oukoku.com/" target="_blank" rel="noopener">那須どうぶつ王国</a>へ切替。</p></div>
-        </div>
-        <p class="heart"><svg class="ic"><use href="#i-heart"/></svg>少し怖い高さを二人で越えると、距離がぐっと縮まる。クリア後のハイタッチまでがセット。</p>
-      </div></div>
-      <div class="tl"><div class="time">13:00</div><div class="body"><h4><svg class="ic"><use href="#i-fish"/></svg>清流の里で川魚ランチ</h4><p>高さ4.5mの滝がある釣り堀でイワナ・ニジマスを釣り、その場で炭火・天然塩の塩焼きに。名物の手打ちそば・清流うどんも。<a class="inl" href="https://www.seiryunosato.com/" target="_blank" rel="noopener">清流の里</a>（食事11:00〜15:00／木曜定休）。NOZARUと同じ高久乙エリアで近い。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>自分で釣った魚を分け合う昼。アクティブのあとの一尾は格別。</p></div></div>
-      <div class="tl"><div class="time">14:45</div><div class="body"><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場でゆるむ</h4><p>入場無料の老舗。<a class="inl" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener">南ヶ丘牧場</a>のジャージー牛乳ソフト、動物ふれあい。肩の力が抜けるレトロ空間。</p></div></div>
+      <div class="tl"><div class="time">10:00</div><div class="body"><h4><svg class="ic"><use href="#i-pin"/></svg>那須高原に到着 → まず山へ</h4><p>初日は火山の眺めから。那須街道を上がってロープウェイ山麓駅へ（山の好天は午前が勝負）。</p></div></div>
+      <div class="tl"><div class="time">10:45</div><div class="body"><h4><svg class="ic"><use href="#i-ropeway"/></svg>那須ロープウェイ → 茶臼岳</h4><p>111人乗りゴンドラで約4分、9合目へ。活火山の荒々しい眺めと雲海。<a class="inl" href="https://www.nasu-ropeway.jp/" target="_blank" rel="noopener">那須ロープウェイ</a>（大人往復2,000円）。<span style="color:var(--ash)">※強風で運休あり、当日要確認。雨なら殺生石の木道とカフェ巡りに切替。</span></p></div></div>
+      <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-meat"/></svg>昼食 — 湯本・高原で</h4><p>山のあとはしっかりめに。那須和牛や、ビートルズに包まれたベーカリー「ペニーレイン」も。</p></div></div>
+      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-volcano"/></svg>殺生石・賽の河原</h4><p>九尾の狐伝説が眠る火山地帯。硫黄の噴気と木道散策で別世界の空気。<a class="inl" href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" rel="noopener">殺生石</a>（那須湯本）。</p></div></div>
+      <div class="tl"><div class="time">15:00</div><div class="body"><h4><svg class="ic"><use href="#i-bridge"/></svg>つつじ吊橋＆駒止の滝</h4><p>橋長130m・高さ38mの<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/11" target="_blank" rel="noopener">つつじ吊橋</a>で揺れを楽しみ、<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/14" target="_blank" rel="noopener">駒止の滝</a>の神秘的な滝つぼへ。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>吊橋では自然と手をつなぐ口実ができる。揺れに感謝。</p></div></div>
       <div class="tl"><div class="time">16:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナール那須にチェックイン（16:00）→ 温泉・プール</h4><p>今回の宿は<a class="inl" href="https://www.epinard.jp/" target="_blank" rel="noopener">ホテルエピナール那須</a>に2連泊（メインタワー・デラックス洋室53㎡）。まずは温泉とプールで、汗をかいた体をほどく。</p></div></div>
       <div class="tl"><div class="time">17:30</div><div class="body"><h4><svg class="ic"><use href="#i-heart"/></svg>恋人の聖地で夕景・夜景</h4><p>標高1048mの<a class="inl" href="https://www.jalan.net/kankou/spt_guide000000182430/" target="_blank" rel="noopener">那須高原展望台</a>（恋人の聖地）。日が落ちると関東平野の灯りが一面に。小窓のピエロの言い伝えも。</p></div></div>
       <div class="tl"><div class="time">18:30</div><div class="body"><h4><svg class="ic"><use href="#i-flame"/></svg>夕食 — 和洋中100種バイキング</h4><p>宿の人気No.1プラン、和洋中100種の豪華バイキング。あれもこれもと取り分けて、旅の初日を乾杯で締める。</p></div></div>
@@ -543,14 +599,21 @@
   </div>
 
   <div class="day">
-    <div class="day-tag"><span class="d">Day 2</span><h3>火山と、滝と、水の庭</h3><span class="sub">7/15(水)・茶臼岳 → 自然 → アート</span></div>
+    <div class="day-tag"><span class="d">Day 2</span><h3>樹上を渡り、釣って食べる</h3><span class="sub">7/15(水)・NOZARU → 川魚 → 水庭</span></div>
     <div class="timeline">
-      <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>朝食、ゆっくり</h4><p>2泊あるから急がない。高原の朝の空気を味わってから動き出す。</p></div></div>
-      <div class="tl"><div class="time">9:30</div><div class="body"><h4><svg class="ic"><use href="#i-ropeway"/></svg>那須ロープウェイ → 茶臼岳</h4><p>111人乗りゴンドラで約4分、9合目へ。活火山の荒々しい眺めと雲海。<a class="inl" href="https://www.nasu-ropeway.jp/" target="_blank" rel="noopener">那須ロープウェイ</a>（大人往復2,000円）。<span style="color:var(--ash)">※強風で運休あり、当日要確認。雨なら殺生石やカフェへ。</span></p></div></div>
-      <div class="tl"><div class="time">11:30</div><div class="body"><h4><svg class="ic"><use href="#i-volcano"/></svg>殺生石・賽の河原</h4><p>九尾の狐伝説が眠る火山地帯。硫黄の噴気と木道散策で別世界の空気。<a class="inl" href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" rel="noopener">殺生石</a>（那須湯本）。</p></div></div>
-      <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-meat"/></svg>昼食</h4><p>湯本・高原のレストランで。山歩きのあとはしっかりめに。</p></div></div>
-      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-bridge"/></svg>つつじ吊橋＆駒止の滝</h4><p>橋長130m・高さ38mの<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/11" target="_blank" rel="noopener">つつじ吊橋</a>から那須連山を望み、近くの<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/14" target="_blank" rel="noopener">駒止の滝</a>観瀑台へ。「那須第一の滝」の神秘的な滝つぼ。</p></div></div>
-      <div class="tl"><div class="time">15:30</div><div class="body"><h4><svg class="ic"><use href="#i-water"/></svg>アートビオトープ「水庭」</h4><p>建築家・石上純也が手がけた、318本の木と160の池が織りなす幻想的な庭園（完全予約制）。<a class="inl" href="https://www.artbiotop.jp/water_garden" target="_blank" rel="noopener">水庭</a>は雨でも美しい。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>言葉少なに歩きたい場所。ふたりの“好き”の解像度が上がる。</p></div></div>
+      <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>朝食をしっかり — 主役の日</h4><p>今日はNOZARUの日。朝食バイキングでエネルギー補給して、動きやすい服とスニーカーで出発。</p></div></div>
+      <div class="tl"><div class="time">9:30</div><div class="body">
+        <h4><svg class="ic"><use href="#i-zip"/></svg>NOZARU — 森の空中アスレチック（主役）</h4>
+        <p>樹上10m超を、ワイヤーで渡る巨大アスレチック。8コース72エレメント、100m超のジップラインも。声をかけ合って一緒にクリアする、最高の共同作戦。宿から約30分・営業8:30〜17:00。午前スタートで夕立前にたっぷり遊ぶ。</p>
+        <div class="weather">
+          <div class="wcard sun"><div class="wt"><svg class="ic"><use href="#i-zip"/></svg>決行（晴れ）</div><p>大人4,600円・身長130cm以上。予約優先。所要は目安2〜3時間ほど（要確認）。</p></div>
+          <div class="wcard rain"><div class="wt"><svg class="ic"><use href="#i-rain"/></svg>振替（雨・雷）</div><p>荒天時は中止のことがあるので、屋内の<a class="inl" href="https://nasu-oukoku.com/" target="_blank" rel="noopener">那須どうぶつ王国</a>へ切替。</p></div>
+        </div>
+        <p class="heart"><svg class="ic"><use href="#i-heart"/></svg>少し怖い高さを二人で越えると、距離がぐっと縮まる。クリア後のハイタッチまでがセット。</p>
+      </div></div>
+      <div class="tl"><div class="time">13:00</div><div class="body"><h4><svg class="ic"><use href="#i-fish"/></svg>清流の里で川魚ランチ</h4><p>高さ4.5mの滝がある釣り堀でイワナ・ニジマスを釣り、その場で炭火・天然塩の塩焼きに。名物の手打ちそば・清流うどんも。<a class="inl" href="https://www.seiryunosato.com/" target="_blank" rel="noopener">清流の里</a>（食事11:00〜15:00／木曜定休 → 7/15は水曜で営業日）。NOZARUと同じ高久乙エリアで近い。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>自分で釣った魚を分け合う昼。アスレチックのあとの一尾は格別。</p></div></div>
+      <div class="tl"><div class="time">14:45</div><div class="body"><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場でゆるむ</h4><p>入場無料の老舗。<a class="inl" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener">南ヶ丘牧場</a>のジャージー牛乳ソフト、動物ふれあい。頑張ったあとのご褒美タイム。</p></div></div>
+      <div class="tl"><div class="time">16:00</div><div class="body"><h4><svg class="ic"><use href="#i-water"/></svg>アートビオトープ「水庭」</h4><p>建築家・石上純也が手がけた、318本の木と160の池が織りなす幻想的な庭園（完全予約制・予約時間に合わせて前後調整）。<a class="inl" href="https://www.artbiotop.jp/water_garden" target="_blank" rel="noopener">水庭</a>は静けさで一日を締めるのにぴったり。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>言葉少なに歩きたい場所。ふたりの“好き”の解像度が上がる。</p></div></div>
       <div class="tl"><div class="time">17:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナールへ戻ってのんびり</h4><p>2泊目も同じ宿だから、荷ほどき不要で身軽。温泉とプールをもう一度、ネイチャーツアーや館内でゆっくり。夕食は前夜と趣を変えて。</p></div></div>
       <div class="tl"><div class="time">18:30</div><div class="body"><h4><svg class="ic"><use href="#i-flame"/></svg>夕食、そして夜の湯</h4><p>2夜目もバイキングを気分で。趣を変えたいなら別注のフレンチや日本料理「菜す乃」も（要確認）。湯と星で、とことんのんびり。</p></div></div>
     </div>
@@ -700,17 +763,6 @@
     <div class="snote reveal"><h4><svg class="ic"><use href="#i-car"/></svg>拠点としての位置</h4><p>那須ICや那須ガーデンアウトレットに近い麓寄りの立地。NOZARU・清流の里・茶臼岳へは山を少し上がる形（各25〜40分目安）。行き帰りの買い物や食事にも便利。</p></div>
   </div>
 
-  <p class="alt-label">参考：比較した他の宿</p>
-  <div class="pgrid">
-    <a class="pcard reveal" href="https://risonare.com/nasu/" target="_blank" rel="noopener" style="--g1:#356450;--g2:#264434">
-      <div class="pcard-img"><img data-url="https://risonare.com/nasu/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://risonare.com/nasu/" alt="リゾナーレ那須 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-bed"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
-      <div class="pcard-body"><span class="tag">Luxury</span><h4><svg class="ic"><use href="#i-bed"/></svg>リゾナーレ那須</h4><p>星野リゾートのアグリツーリズモ。畑・温泉・自然体験。記念日に格上げしたいとき用に。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>目安 ¥30,000〜/人</div></div>
-    </a>
-    <a class="pcard reveal" href="https://www.omaru.co.jp/" target="_blank" rel="noopener" style="--g1:#2f6d72;--g2:#244a4a">
-      <div class="pcard-img"><img data-url="https://www.omaru.co.jp/" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.omaru.co.jp/" alt="大丸温泉旅館 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-onsen"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
-      <div class="pcard-body"><span class="tag">秘湯</span><h4><svg class="ic"><use href="#i-onsen"/></svg>大丸温泉旅館</h4><p>川がそのまま大露天になる奥那須の秘湯。1泊だけ趣を変えたくなったら。</p><div class="meta"><svg class="ic"><use href="#i-pin"/></svg>那須ICから約25分</div></div>
-    </a>
-  </div>
 </section>
 
 <hr class="divider">
@@ -794,6 +846,7 @@
       <label class="ck"><input type="checkbox" data-ck="d17"><span class="box"></span><span class="txt">カメラ・モバイルバッテリー・ゴミ袋</span></label>
     </div>
   </div>
+  <div id="packDone" aria-hidden="true"><svg class="ic"><use href="#i-sparkle"/></svg>準備かんぺき！ いってらっしゃい<svg class="ic"><use href="#i-sparkle"/></svg></div>
 </section>
 
 <hr class="divider">
@@ -802,7 +855,7 @@
   <div class="sec-head reveal"><p class="eyebrow">Good to Know</p><h2>旅の心得</h2></div>
   <div class="tips">
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-zip"/></svg></div><div><h4>NOZARUは予約優先</h4><p>当日受付も可だが予約推奨。身長130cm以上、動きやすい服とスニーカーで。雨天・荒天は安全のため中止のことも（要確認）。</p></div></div>
-    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-fish"/></svg></div><div><h4>清流の里は15時まで・木曜定休</h4><p>釣り堀9:00〜15:00、食事11:00〜15:00。木曜（祝日除く）と元日は休み。最終日7/16が木曜のため、清流の里は初日7/14に配置済み。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-fish"/></svg></div><div><h4>清流の里は15時まで・木曜定休</h4><p>釣り堀9:00〜15:00、食事11:00〜15:00。木曜（祝日除く）と元日は休み。最終日7/16が木曜のため、清流の里はNOZARUと同じ2日目7/15（水・営業日）に配置済み。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-rain"/></svg></div><div><h4>夏は夕立・雷に注意</h4><p>午後はにわか雨や落雷が出やすい。NOZARUなど外遊びは午前に寄せ、午後は屋内（美術・カフェ・どうぶつ王国）を一枚用意。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-ropeway"/></svg></div><div><h4>ロープウェイは風次第</h4><p>強風で運休することあり。当日の運行状況を出発前に確認。雨なら殺生石やカフェへ。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-water"/></svg></div><div><h4>水庭は完全予約制</h4><p>アートビオトープの水庭見学は事前予約が必要。日時を早めに押さえて。</p></div></div>
@@ -828,6 +881,8 @@
     <p class="disc"><svg class="ic"><use href="#i-info"/></svg>記載の所要時間・料金・営業日・予約要否はすべて目安です。お出かけ前に各スポットの公式サイト（カードのリンク先）で最新情報をご確認ください。スポット画像は各公式ページのライブプレビューを表示しています。旅行日：2026年7月14日(火)〜16日(木)・2泊3日。プラン作成日：2026年6月20日。</p>
   </div>
 </footer>
+
+<button id="toTop" aria-label="ページの先頭へ戻る"><svg class="ic"><use href="#i-ropeway"/></svg></button>
 
 <script>
   // image fallback: thum.io -> WordPress mShots -> branded gradient tile
@@ -868,18 +923,25 @@
       targets.forEach(function(el){ ro.observe(el); });
     }
 
-    // scroll progress bar
+    // scroll progress bar + driving car + back-to-top
     var prog = document.getElementById('scrollprog');
+    var car = document.getElementById('progcar');
+    var toTop = document.getElementById('toTop');
     var ticking = false;
     function onScroll(){
       if(ticking) return; ticking = true;
       requestAnimationFrame(function(){
         var de = document.documentElement, max = de.scrollHeight - de.clientHeight;
-        if(prog) prog.style.transform = 'scaleX(' + (max > 0 ? de.scrollTop / max : 0) + ')';
+        var p = max > 0 ? de.scrollTop / max : 0;
+        if(prog) prog.style.transform = 'scaleX(' + p + ')';
+        if(car) car.style.transform = 'translateX(' + (p * (de.clientWidth - 32)) + 'px)';
+        if(toTop) toTop.classList.toggle('show', de.scrollTop > 600);
         ticking = false;
       });
     }
     window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll, {passive:true});
+    if(toTop) toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'}); });
     onScroll();
 
     var chips = Array.prototype.slice.call(document.querySelectorAll('#chips .chip'));
@@ -902,14 +964,22 @@
     var KEY='nasu-plan-checklist-v2';
     var saved={};
     try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ saved={}; }
-    document.querySelectorAll('input[data-ck]').forEach(function(box){
+    var allBoxes = document.querySelectorAll('input[data-ck]');
+    var doneEl = document.getElementById('packDone');
+    function checkPackDone(){
+      var all = allBoxes.length > 0 && Array.prototype.every.call(allBoxes, function(b){ return b.checked; });
+      if(doneEl) doneEl.classList.toggle('show', all);
+    }
+    allBoxes.forEach(function(box){
       var id=box.getAttribute('data-ck');
       if(saved[id]) box.checked=true;
       box.addEventListener('change', function(){
         saved[id]=box.checked;
         try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(e){}
+        checkPackDone();
       });
     });
+    checkPackDone();
   })();
 </script>
 </body>
