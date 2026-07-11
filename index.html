@@ -235,6 +235,9 @@
   .tl .heart{margin-top:8px;font-size:.84rem;color:var(--berry);display:flex;align-items:flex-start;gap:7px}
   .tl .heart .ic{color:var(--berry);font-size:1rem;margin-top:.2em}
   .tl a.inl{color:var(--moor-2);font-weight:600;text-decoration:underline;text-decoration-color:var(--copper-soft);text-underline-offset:2px}
+  .tl-drive{margin:-2px 0 -2px 98px;padding:2px 0;font-size:.78rem;color:var(--ash);display:flex;align-items:center;gap:6px}
+  .tl-drive .ic{color:var(--copper-soft);font-size:.85rem}
+  .day.is-in .tl-drive{animation:revealUp .4s cubic-bezier(.2,.75,.25,1) both}
 
   .weather{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 14px}
   .wcard{border-radius:14px;padding:18px 20px;border:1px solid var(--line)}
@@ -363,6 +366,7 @@
     .timeline::before{left:64px}
     .tl{grid-template-columns:62px 1fr;gap:16px}
     .tl .body::before{left:-27px}
+    .tl-drive{margin-left:78px}
     .day-tag .sub{display:none}
     #atmos .orb{filter:blur(48px)}
     #atmos .orb3{display:none}
@@ -458,6 +462,7 @@
   <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2.2 4.8L8.5 15.5l2.2-4.8z"/></symbol>
   <symbol id="i-zip" viewBox="0 0 24 24"><path d="M3 5l18 9"/><circle cx="11.2" cy="9.6" r="1.5"/><path d="M11.2 11.1v2.4M11.2 13.5c-1.6 0-2.2 1.6-1.1 3.3M11.2 13.5c1.6 0 2.2 1.6 1.1 3.3"/></symbol>
   <symbol id="i-fish" viewBox="0 0 24 24"><path d="M3 12c3.5-5 10.5-5 14 0-3.5 5-10.5 5-14 0z"/><path d="M17 12l4-3v6z"/><circle cx="7.5" cy="11" r=".7"/></symbol>
+  <symbol id="i-buggy" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 18h7"/><path d="M4 15.5l2-5.5h12l2 5.5"/><path d="M7.5 10l1-3h7l1 3"/></symbol>
   <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
   <symbol id="i-leaf2" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19C5 10.7 10.7 5 19 5c0 8.3-5.7 14-14 14z"/><path d="M7.5 16.5C11 13 13.5 11 16.5 8.5" stroke="rgba(255,255,255,.35)" stroke-width="1" fill="none"/></symbol>
 </defs></svg>
@@ -582,39 +587,50 @@
   <div class="sec-head reveal"><p class="eyebrow">The Itinerary</p><h2>2泊3日の道のり</h2><p>「午前は山と外遊び（夕立前）、午後はゆるめる」が黄金律。時刻はすべて目安、ふたりのペースで前後させてOK。</p></div>
 
   <div class="day">
-    <div class="day-tag"><span class="d">Day 1</span><h3>火山を望み、湯にとける</h3><span class="sub">7/14(火)・走行 → 茶臼岳 → 夜景</span></div>
+    <div class="day-tag"><span class="d">Day 1</span><h3>火山とバギー、牧場を駆ける</h3><span class="sub">7/14(火)・茶臼岳 → バギー → 牧場 → 夜景</span></div>
     <div class="timeline">
       <div class="tl"><div class="time">6:30</div><div class="body"><h4><svg class="ic"><use href="#i-car"/></svg>新杉田を出発</h4><p>渋滞前に首都高を抜ける。プレイリストと飲み物を用意して、ドライブもデートの一部に。</p></div></div>
-      <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>SAで休憩</h4><p>佐野・蓮田など。朝のSAグルメで小休止。運転を交代できるなら交代を。</p></div></div>
-      <div class="tl"><div class="time">10:00</div><div class="body"><h4><svg class="ic"><use href="#i-pin"/></svg>那須高原に到着 → まず山へ</h4><p>初日は火山の眺めから。那須街道を上がってロープウェイ山麓駅へ（山の好天は午前が勝負）。</p></div></div>
-      <div class="tl"><div class="time">10:45</div><div class="body"><h4><svg class="ic"><use href="#i-ropeway"/></svg>那須ロープウェイ → 茶臼岳</h4><p>111人乗りゴンドラで約4分、9合目へ。活火山の荒々しい眺めと雲海。<a class="inl" href="https://www.nasu-ropeway.jp/" target="_blank" rel="noopener">那須ロープウェイ</a>（大人往復2,000円）。<span style="color:var(--ash)">※強風で運休あり、当日要確認。雨なら殺生石の木道とカフェ巡りに切替。</span></p></div></div>
-      <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-meat"/></svg>昼食 — 湯本・高原で</h4><p>山のあとはしっかりめに。那須和牛や、ビートルズに包まれたベーカリー「ペニーレイン」も。</p></div></div>
-      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-volcano"/></svg>殺生石・賽の河原</h4><p>九尾の狐伝説が眠る火山地帯。硫黄の噴気と木道散策で別世界の空気。<a class="inl" href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" rel="noopener">殺生石</a>（那須湯本）。</p></div></div>
-      <div class="tl"><div class="time">15:00</div><div class="body"><h4><svg class="ic"><use href="#i-bridge"/></svg>つつじ吊橋＆駒止の滝</h4><p>橋長130m・高さ38mの<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/11" target="_blank" rel="noopener">つつじ吊橋</a>で揺れを楽しみ、<a class="inl" href="https://www.nasu-ropeway.jp/enjoy/14" target="_blank" rel="noopener">駒止の滝</a>の神秘的な滝つぼへ。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>吊橋では自然と手をつなぐ口実ができる。揺れに感謝。</p></div></div>
-      <div class="tl"><div class="time">16:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナール那須にチェックイン（16:00）→ 温泉・プール</h4><p>今回の宿は<a class="inl" href="https://www.epinard.jp/" target="_blank" rel="noopener">ホテルエピナール那須</a>に2連泊（メインタワー・デラックス洋室53㎡）。まずは温泉とプールで、汗をかいた体をほどく。</p></div></div>
-      <div class="tl"><div class="time">17:30</div><div class="body"><h4><svg class="ic"><use href="#i-heart"/></svg>恋人の聖地で夕景・夜景</h4><p>標高1048mの<a class="inl" href="https://www.jalan.net/kankou/spt_guide000000182430/" target="_blank" rel="noopener">那須高原展望台</a>（恋人の聖地）。日が落ちると関東平野の灯りが一面に。小窓のピエロの言い伝えも。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>首都高→東北道 約1.5h</div>
+      <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>SAで休憩</h4><p>佐野・蓮田など。朝のSAグルメで小休止、30分ほど。運転を交代できるなら交代を。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>東北道を北上 約1.5h</div>
+      <div class="tl"><div class="time">10:00</div><div class="body"><h4><svg class="ic"><use href="#i-pin"/></svg>那須IC到着</h4><p>那須街道からボルケーノハイウェイへ。山の好天は午前が勝負。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>那須街道→ボルケーノハイウェイ 約30分</div>
+      <div class="tl"><div class="time">10:30</div><div class="body"><h4><svg class="ic"><use href="#i-ropeway"/></svg>那須ロープウェイ → 茶臼岳</h4><p>111人乗りゴンドラで約4分、9合目へ。活火山の荒々しい眺めと雲海。所要約1時間15分。<a class="inl" href="https://www.nasu-ropeway.jp/" target="_blank" rel="noopener">那須ロープウェイ</a>（大人往復2,000円）。<span style="color:var(--ash)">※強風で運休あり、当日要確認。雨なら殺生石散策とカフェ巡りに切替。</span></p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>ボルケーノハイウェイを下って湯本へ 約5分</div>
+      <div class="tl"><div class="time">12:00</div><div class="body"><h4><svg class="ic"><use href="#i-volcano"/></svg>殺生石・賽の河原</h4><p>九尾の狐伝説が眠る火山地帯。硫黄の噴気と木道散策で別世界の空気。所要約30分。<a class="inl" href="https://www.tochigiji.or.jp/spot/s9488" target="_blank" rel="noopener">殺生石</a>（那須湯本）。</p></div></div>
+      <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-meat"/></svg>昼食 — 湯本エリアで</h4><p>山のあとはしっかりめに。那須和牛や、ビートルズに包まれたベーカリー「ペニーレイン」も。湯本は殺生石のすぐ近く。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>同じ湯本エリア 約5分</div>
+      <div class="tl"><div class="time">13:30</div><div class="body"><h4><svg class="ic"><use href="#i-buggy"/></svg>那須バギーパーク</h4><p>570cc 4WDの本格バギーで岩場や最大傾斜30°のクレイジーヒル（全長800m）、泥と小川を走るMUDMAX（全長800m）など。ふたりで声を上げて走る爽快感。<a class="inl" href="http://buggy-park.com/course/" target="_blank" rel="noopener">那須バギーパーク</a>（湯本588・10:00〜16:30・水曜定休 ※夏休みは営業・料金は公式で要確認）。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>泥だらけになって笑い合えたら、それだけで距離が縮まる。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>同じ湯本エリア 約5分</div>
+      <div class="tl"><div class="time">14:30</div><div class="body"><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場でゆるむ</h4><p>入場無料の老舗。<a class="inl" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener">南ヶ丘牧場</a>のジャージー牛乳ソフト、動物ふれあい。バギーのあとのご褒美タイム。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>山を下ってエピナールへ 約20分</div>
+      <div class="tl"><div class="time">16:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナール那須にチェックイン → 温泉・プール</h4><p>今回の宿は<a class="inl" href="https://www.epinard.jp/" target="_blank" rel="noopener">ホテルエピナール那須</a>に2連泊（メインタワー・デラックス洋室53㎡）。まずは温泉とプールで、汗をかいた体をほどく。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>ボルケーノハイウェイ上部へ 約25分</div>
+      <div class="tl"><div class="time">17:30</div><div class="body"><h4><svg class="ic"><use href="#i-heart"/></svg>恋人の聖地で夕景・夜景</h4><p>標高1048mの<a class="inl" href="https://www.jalan.net/kankou/spt_guide000000182430/" target="_blank" rel="noopener">那須高原展望台</a>（恋人の聖地）。日が落ちると関東平野の灯りが一面に。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>エピナールへ戻る 約25分</div>
       <div class="tl"><div class="time">18:30</div><div class="body"><h4><svg class="ic"><use href="#i-flame"/></svg>夕食 — 和洋中100種バイキング</h4><p>宿の人気No.1プラン、和洋中100種の豪華バイキング。あれもこれもと取り分けて、旅の初日を乾杯で締める。</p></div></div>
       <div class="tl"><div class="time">21:00</div><div class="body"><h4><svg class="ic"><use href="#i-moon"/></svg>星空</h4><p>光害の少ない那須の夜空。露天から、あるいは宿の前で。夏でも夜は涼しい、一枚羽織って。</p></div></div>
     </div>
   </div>
 
   <div class="day">
-    <div class="day-tag"><span class="d">Day 2</span><h3>樹上を渡り、釣って食べる</h3><span class="sub">7/15(水)・NOZARU → 川魚 → 水庭</span></div>
+    <div class="day-tag"><span class="d">Day 2</span><h3>樹上を渡り、釣って食べる</h3><span class="sub">7/15(水)・NOZARU → 川魚 → のんびり</span></div>
     <div class="timeline">
       <div class="tl"><div class="time">8:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>朝食をしっかり — 主役の日</h4><p>今日はNOZARUの日。朝食バイキングでエネルギー補給して、動きやすい服とスニーカーで出発。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>那須街道を上って高久乙エリアへ 約30分</div>
       <div class="tl"><div class="time">9:30</div><div class="body">
         <h4><svg class="ic"><use href="#i-zip"/></svg>NOZARU — 森の空中アスレチック（主役）</h4>
-        <p>樹上10m超を、ワイヤーで渡る巨大アスレチック。8コース72エレメント、100m超のジップラインも。声をかけ合って一緒にクリアする、最高の共同作戦。宿から約30分・営業8:30〜17:00。午前スタートで夕立前にたっぷり遊ぶ。</p>
+        <p>樹上10m超を、ワイヤーで渡る巨大アスレチック。8コース72エレメント、100m超のジップラインも。声をかけ合って一緒にクリアする、最高の共同作戦。営業8:30〜17:00。午前スタートで夕立前にたっぷり遊ぶ。所要約2〜3時間。</p>
         <div class="weather">
-          <div class="wcard sun"><div class="wt"><svg class="ic"><use href="#i-zip"/></svg>決行（晴れ）</div><p>大人4,600円・身長130cm以上。予約優先。所要は目安2〜3時間ほど（要確認）。</p></div>
+          <div class="wcard sun"><div class="wt"><svg class="ic"><use href="#i-zip"/></svg>決行（晴れ）</div><p>大人4,600円・身長130cm以上。予約優先。</p></div>
           <div class="wcard rain"><div class="wt"><svg class="ic"><use href="#i-rain"/></svg>振替（雨・雷）</div><p>荒天時は中止のことがあるので、屋内の<a class="inl" href="https://nasu-oukoku.com/" target="_blank" rel="noopener">那須どうぶつ王国</a>へ切替。</p></div>
         </div>
         <p class="heart"><svg class="ic"><use href="#i-heart"/></svg>少し怖い高さを二人で越えると、距離がぐっと縮まる。クリア後のハイタッチまでがセット。</p>
       </div></div>
-      <div class="tl"><div class="time">13:00</div><div class="body"><h4><svg class="ic"><use href="#i-fish"/></svg>清流の里で川魚ランチ</h4><p>高さ4.5mの滝がある釣り堀でイワナ・ニジマスを釣り、その場で炭火・天然塩の塩焼きに。名物の手打ちそば・清流うどんも。<a class="inl" href="https://www.seiryunosato.com/" target="_blank" rel="noopener">清流の里</a>（食事11:00〜15:00／木曜定休 → 7/15は水曜で営業日）。NOZARUと同じ高久乙エリアで近い。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>自分で釣った魚を分け合う昼。アスレチックのあとの一尾は格別。</p></div></div>
-      <div class="tl"><div class="time">14:45</div><div class="body"><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場でゆるむ</h4><p>入場無料の老舗。<a class="inl" href="https://www.minamigaoka.co.jp/" target="_blank" rel="noopener">南ヶ丘牧場</a>のジャージー牛乳ソフト、動物ふれあい。頑張ったあとのご褒美タイム。</p></div></div>
-      <div class="tl"><div class="time">16:00</div><div class="body"><h4><svg class="ic"><use href="#i-water"/></svg>アートビオトープ「水庭」</h4><p>建築家・石上純也が手がけた、318本の木と160の池が織りなす幻想的な庭園（完全予約制・予約時間に合わせて前後調整）。<a class="inl" href="https://www.artbiotop.jp/water_garden" target="_blank" rel="noopener">水庭</a>は静けさで一日を締めるのにぴったり。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>言葉少なに歩きたい場所。ふたりの“好き”の解像度が上がる。</p></div></div>
-      <div class="tl"><div class="time">17:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナールへ戻ってのんびり</h4><p>2泊目も同じ宿だから、荷ほどき不要で身軽。温泉とプールをもう一度、ネイチャーツアーや館内でゆっくり。夕食は前夜と趣を変えて。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>同じ高久乙エリア 約5分</div>
+      <div class="tl"><div class="time">13:00</div><div class="body"><h4><svg class="ic"><use href="#i-fish"/></svg>清流の里で川魚ランチ</h4><p>高さ4.5mの滝がある釣り堀でイワナ・ニジマスを釣り、その場で炭火・天然塩の塩焼きに。名物の手打ちそば・清流うどんも。<a class="inl" href="https://www.seiryunosato.com/" target="_blank" rel="noopener">清流の里</a>（食事11:00〜15:00／木曜定休 → 7/15は水曜で営業日）。</p><p class="heart"><svg class="ic"><use href="#i-heart"/></svg>自分で釣った魚を分け合う昼。アスレチックのあとの一尾は格別。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>エピナールへ戻る 約25分</div>
+      <div class="tl"><div class="time">15:00</div><div class="body"><h4><svg class="ic"><use href="#i-onsen"/></svg>エピナールでのんびり</h4><p>2泊目も同じ宿だから、荷ほどき不要で身軽。温泉とプールをもう一度、ネイチャーツアーや館内でゆっくり。NOZARUで頑張った体をほどく午後。</p></div></div>
       <div class="tl"><div class="time">18:30</div><div class="body"><h4><svg class="ic"><use href="#i-flame"/></svg>夕食、そして夜の湯</h4><p>2夜目もバイキングを気分で。趣を変えたいなら別注のフレンチや日本料理「菜す乃」も（要確認）。湯と星で、とことんのんびり。</p></div></div>
     </div>
   </div>
@@ -623,10 +639,14 @@
     <div class="day-tag"><span class="d">Day 3</span><h3>カフェと、余韻と、お土産</h3><span class="sub">7/16(木)・黒磯 → 土産 → 帰路</span></div>
     <div class="timeline">
       <div class="tl"><div class="time">9:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>朝ゆっくり → チェックアウト</h4><p>最終日は名残を惜しんで。荷物をまとめて黒磯方面へ。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>エピナール→黒磯 約25分</div>
       <div class="tl"><div class="time">11:00</div><div class="body"><h4><svg class="ic"><use href="#i-coffee"/></svg>1988 CAFE SHOZO（黒磯）</h4><p>那須が育てたカフェ文化の聖地。丁寧な一杯と焼き菓子で旅をしめる。<a class="inl" href="https://www.shozo.co.jp/" target="_blank" rel="noopener">SHOZO</a>（11:00〜・黒磯駅徒歩10分）。<span style="color:var(--ash)">※SHOZOは不定休（第1木曜が休みとの情報）。7/16は第3木曜だが念のため<a class="inl" href="https://www.shozo.co.jp/news/categories/holiday/" target="_blank" rel="noopener">公式の営業日</a>を確認。休みなら年中無休のチーズガーデンのカフェへ。</span></p></div></div>
       <div class="tl"><div class="time">12:30</div><div class="body"><h4><svg class="ic"><use href="#i-leaf"/></svg>軽め昼 / 街さんぽ</h4><p>黒磯の雑貨店やベーカリーを少し。地元の空気をもう少しだけ。</p></div></div>
-      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-cheese"/></svg>チーズガーデンでお土産</h4><p>御用邸チーズケーキを名残に。<a class="inl" href="https://cheesegarden.jp/pages/honten" target="_blank" rel="noopener">チーズガーデン那須本店</a>でカフェ＆土産、車内おやつも。年中無休なので木曜でも安心。そのまま那須ICへ。</p></div></div>
-      <div class="tl"><div class="time">14:30</div><div class="body"><h4><svg class="ic"><use href="#i-road"/></svg>那須ICから帰路</h4><p>夕方の渋滞を読みつつ南下。SAで休憩を。眠気は無理せず交代・仮眠で。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>黒磯→那須街道方面 約20分</div>
+      <div class="tl"><div class="time">14:00</div><div class="body"><h4><svg class="ic"><use href="#i-cheese"/></svg>チーズガーデンでお土産</h4><p>御用邸チーズケーキを名残に。<a class="inl" href="https://cheesegarden.jp/pages/honten" target="_blank" rel="noopener">チーズガーデン那須本店</a>でカフェ＆土産、車内おやつも。年中無休なので木曜でも安心。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>チーズガーデン→那須IC 約10分</div>
+      <div class="tl"><div class="time">14:30</div><div class="body"><h4><svg class="ic"><use href="#i-road"/></svg>那須ICから帰路</h4><p>夕方の渋滞を読みつつ南下。佐野・蓮田SAで休憩を。眠気は無理せず交代・仮眠で。</p></div></div>
+      <div class="tl-drive"><svg class="ic"><use href="#i-car"/></svg>東北道→首都高 約3〜3.5時間（休憩込み）</div>
       <div class="tl"><div class="time">18:00</div><div class="body"><h4><svg class="ic"><use href="#i-car"/></svg>新杉田 着</h4><p>目安。渋滞次第で前後。最後まで安全運転で、いい旅を締めくくる。</p></div></div>
     </div>
   </div>
@@ -683,9 +703,9 @@
       <div class="pcard-body"><span class="tag">Pastoral</span><h4><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場</h4><p>入場・駐車無料の老舗。ジャージー牛乳ソフト、釣り堀、乗馬、動物ふれあい。肩の力が抜ける時間。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>入場無料 / 年中無休 ／ 宿から約20分</div></div>
     </a>
 
-    <a class="pcard reveal" href="https://www.artbiotop.jp/water_garden" target="_blank" rel="noopener" style="--g1:#8699a0;--g2:#5f7f86">
-      <div class="pcard-img"><img data-url="https://www.artbiotop.jp/water_garden" src="https://image.thum.io/get/width/800/crop/600/noanimate/https://www.artbiotop.jp/water_garden" alt="アートビオトープ那須 水庭 公式ページのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-water"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
-      <div class="pcard-body"><span class="tag">Art</span><h4><svg class="ic"><use href="#i-water"/></svg>アートビオトープ「水庭」</h4><p>石上純也設計、318本の樹木と160の池が織りなす静謐な庭。朝の光が最も美しい。</p><div class="meta"><svg class="ic"><use href="#i-info"/></svg>完全予約制（日帰り見学可） ／ 宿から約25分</div></div>
+    <a class="pcard reveal" href="http://buggy-park.com/course/" target="_blank" rel="noopener" style="--g1:#8a5326;--g2:#574a3c">
+      <div class="pcard-img"><img data-url="http://buggy-park.com/course/" src="https://image.thum.io/get/width/800/crop/600/noanimate/http://buggy-park.com/course/" alt="那須バギーパーク 公式サイトのプレビュー" loading="lazy" referrerpolicy="no-referrer" onerror="imgFB(this)"><svg class="pcard-fallicon"><use href="#i-buggy"/></svg><span class="pcard-ext"><svg class="ic"><use href="#i-ext"/></svg></span></div>
+      <div class="pcard-body"><span class="tag">Thrill</span><h4><svg class="ic"><use href="#i-buggy"/></svg>那須バギーパーク</h4><p>570cc 4WDの本格バギーで岩場や泥道を走る。クレイジーヒル（800m）とMUDMAX（800m）の2コース。</p><div class="meta"><svg class="ic"><use href="#i-clock"/></svg>10:00–16:30 / 水曜定休（夏休み営業） ／ 宿から約25分</div></div>
     </a>
 
     <a class="pcard reveal" href="https://www.shozo.co.jp/" target="_blank" rel="noopener" style="--g1:#7a6a58;--g2:#574a3c">
@@ -745,7 +765,7 @@
     <div class="pcard-body">
       <span class="chosen-badge"><svg class="ic"><use href="#i-check"/></svg>ご予約確定</span>
       <h4><svg class="ic"><use href="#i-bed"/></svg>ホテルエピナール那須</h4>
-      <p>温泉とプールを備えた高原の大型リゾート。食事は和洋中バイキング、地上50mのフレンチ、日本料理「和匠ダイニング 菜す乃」など。ネイチャーツアーや動物ふれあいのフォレストエリアもあり、滞在そのものが楽しい。ここに2連泊して、毎日“帰ってくる”安心感を。</p>
+      <p>温泉とプールを備えた高原の大型リゾート。食事は和洋中バイキング、地上50mのフレンチ、日本料理「和匠ダイニング 菜す乃」など。ネイチャーツアーや動物ふれあいのフォレストエリアもあり、滞在そのものが楽しい。ここに2連泊して、毎日"帰ってくる"安心感を。</p>
       <div class="stay-facts"><span>温泉・露天</span><span>室内プール</span><span>和洋中100種バイキング</span><span>地上50mのフレンチ</span><span>ネイチャーツアー</span></div>
       <div class="booking">
         <div class="brow"><span class="bk">日程</span><span class="bv">2026/7/14(火) 16:00 イン → 7/16(木) アウト・2泊</span></div>
@@ -758,7 +778,7 @@
   </a>
 
   <div class="stay-note">
-    <div class="snote reveal"><h4><svg class="ic"><use href="#i-leaf"/></svg>夏ならではの館内体験</h4><p>時期によっては「あじさい＆ゆり鑑賞ツアー」など季節の催しも（〜7月中旬頃・要確認）。雨や夕立の午後の“逃げ場”にもなり、館内だけで一日過ごせる懐の深さ。</p></div>
+    <div class="snote reveal"><h4><svg class="ic"><use href="#i-leaf"/></svg>夏ならではの館内体験</h4><p>時期によっては「あじさい＆ゆり鑑賞ツアー」など季節の催しも（〜7月中旬頃・要確認）。雨や夕立の午後の"逃げ場"にもなり、館内だけで一日過ごせる懐の深さ。</p></div>
     <div class="snote reveal"><h4><svg class="ic"><use href="#i-car"/></svg>拠点としての位置</h4><p>那須ICや那須ガーデンアウトレットに近い麓寄りの立地。NOZARU・清流の里・茶臼岳へは山を少し上がる形（各25〜40分目安）。行き帰りの買い物や食事にも便利。</p></div>
   </div>
 
@@ -780,7 +800,7 @@
   <div class="dist-band reveal"><div class="bl">高久乙・湯本下部<small>約20〜30分</small></div><div class="dchips">
     <span class="dchip"><svg class="ic"><use href="#i-icecream"/></svg>南ヶ丘牧場<span class="v">約20分</span></span>
     <span class="dchip"><svg class="ic"><use href="#i-fish"/></svg>清流の里<span class="v">約25分</span></span>
-    <span class="dchip"><svg class="ic"><use href="#i-water"/></svg>アートビオトープ水庭<span class="v">約25分</span></span>
+    <span class="dchip"><svg class="ic"><use href="#i-buggy"/></svg>那須バギーパーク<span class="v">約25分</span></span>
     <span class="dchip"><svg class="ic"><use href="#i-volcano"/></svg>殺生石<span class="v">約25分</span></span>
     <span class="dchip"><svg class="ic"><use href="#i-zip"/></svg>NOZARU／ハイランドパーク<span class="v">約30分 ◯</span></span>
     <span class="dchip"><svg class="ic"><use href="#i-paw"/></svg>那須どうぶつ王国<span class="v">約30分 ◯</span></span>
@@ -804,7 +824,7 @@
   <div class="grid g2">
     <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-car"/></svg></div><h4>交通（2人ぶん）</h4><p>高速 往復 約10,000〜12,000円 ＋ ガソリン（往復約500km）＋ 駐車場（多くは無料）。SA飲食を別途。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 15,000〜20,000円</div></div>
     <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-bed"/></svg></div><h4>宿（エピナール那須・予約確定）</h4><p>メインタワー デラックス53㎡、和洋中100種バイキングの夕食付き（2食付きプラン）。大人2名・2泊で確定済み。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>¥78,400（税込・確定）</div></div>
-    <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-zip"/></svg></div><h4>体験（2人ぶん）</h4><p>NOZARU 9,200円 ＋ ロープウェイ往復 4,000円 ＋ 清流の里（竿・魚・焼き 〜3,000円）＋ 水庭見学・牧場など。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 20,000〜26,000円</div></div>
+    <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-zip"/></svg></div><h4>体験（2人ぶん）</h4><p>NOZARU 9,200円 ＋ ロープウェイ往復 4,000円 ＋ 清流の里（竿・魚・焼き 〜3,000円）＋ バギーパーク・牧場など。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 20,000〜26,000円</div></div>
     <div class="card reveal"><div class="ci"><svg class="ic"><use href="#i-cheese"/></svg></div><h4>外食・カフェ・土産</h4><p>夕朝食は宿プランに含むので、外で払うのは昼×3・カフェ・川魚・お土産が中心。</p><div class="meta"><svg class="ic"><use href="#i-yen"/></svg>約 15,000〜25,000円</div></div>
   </div>
   <p class="budget-note reveal"><svg class="ic"><use href="#i-info"/></svg>合計の目安：宿 ¥78,400（確定）＋ 交通 約1.5〜2万 ＋ 体験 約2〜2.6万 ＋ 外食・土産 約1.5〜2.5万 ＝ 2人で総額およそ13〜16万円。交通費を2人で按分すると、一人あたりの体感はぐっと下がります。</p>
@@ -840,7 +860,7 @@
       <h4><svg class="ic"><use href="#i-info"/></svg>温泉・予約・記録</h4>
       <label class="ck"><input type="checkbox" data-ck="d13"><span class="box"></span><span class="txt">現金（牧場・釣り堀・共同浴場）</span></label>
       <label class="ck"><input type="checkbox" data-ck="d14"><span class="box"></span><span class="txt">常備薬・絆創膏</span></label>
-      <label class="ck"><input type="checkbox" data-ck="d15"><span class="box"></span><span class="txt">NOZARU・水庭・宿の予約確認</span></label>
+      <label class="ck"><input type="checkbox" data-ck="d15"><span class="box"></span><span class="txt">NOZARU・バギーパーク・宿の予約確認</span></label>
       <label class="ck"><input type="checkbox" data-ck="d16"><span class="box"></span><span class="txt">ロープウェイ運行・清流の里(木曜定休)の確認</span></label>
       <label class="ck"><input type="checkbox" data-ck="d17"><span class="box"></span><span class="txt">カメラ・モバイルバッテリー・ゴミ袋</span></label>
     </div>
@@ -857,7 +877,7 @@
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-fish"/></svg></div><div><h4>清流の里は15時まで・木曜定休</h4><p>釣り堀9:00〜15:00、食事11:00〜15:00。木曜（祝日除く）と元日は休み。最終日7/16が木曜のため、清流の里はNOZARUと同じ2日目7/15（水・営業日）に配置済み。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-rain"/></svg></div><div><h4>夏は夕立・雷に注意</h4><p>午後はにわか雨や落雷が出やすい。NOZARUなど外遊びは午前に寄せ、午後は屋内（美術・カフェ・どうぶつ王国）を一枚用意。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-ropeway"/></svg></div><div><h4>ロープウェイは風次第</h4><p>強風で運休することあり。当日の運行状況を出発前に確認。雨なら殺生石やカフェへ。</p></div></div>
-    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-water"/></svg></div><div><h4>水庭は完全予約制</h4><p>アートビオトープの水庭見学は事前予約が必要。日時を早めに押さえて。</p></div></div>
+    <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-buggy"/></svg></div><div><h4>バギーパークは水曜定休</h4><p>受付10:00〜16:30。水曜定休だが夏休み期間は営業。悪天候時は運行見合わせの場合あり。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-leaf"/></svg></div><div><h4>虫除け・日焼け対策を</h4><p>夏の高原は虫も日差しもそれなり。虫除け・日焼け止め・帽子で快適に。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-clock"/></svg></div><div><h4>平日・連休前でゆったり</h4><p>今回の7/14〜16（火〜木）は平日かつ海の日連休(7/20頃)の前。道も施設も比較的すいている見込み。</p></div></div>
     <div class="tip reveal"><div class="ti"><svg class="ic"><use href="#i-info"/></svg></div><div><h4>営業日・料金は要確認</h4><p>本ページの時刻・料金はすべて目安。最新情報は各スポットの公式サイト（カードのリンク）でご確認を。</p></div></div>
@@ -869,7 +889,7 @@
 <div class="closing">
   <div class="wrap">
     <p class="eyebrow">For the Two of You</p>
-    <blockquote>樹上の風、釣りたての川魚、火山と湯けむり、満天の星。<br>那須の三日間が、ふたりの“好き”をいくつも増やしますように。</blockquote>
+    <blockquote>樹上の風、釣りたての川魚、火山と湯けむり、満天の星。<br>那須の三日間が、ふたりの"好き"をいくつも増やしますように。</blockquote>
     <p class="sig">— Have a wonderful trip</p>
   </div>
 </div>
